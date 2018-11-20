@@ -1,0 +1,229 @@
+[07-Nov-2018 10:16:17 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[07-Nov-2018 10:16:17 Europe/London] PHP Stack trace:
+[07-Nov-2018 10:16:17 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[07-Nov-2018 10:16:17 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[07-Nov-2018 10:16:17 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[07-Nov-2018 10:16:17 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[07-Nov-2018 10:16:17 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[07-Nov-2018 10:16:17 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[07-Nov-2018 10:16:17 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[07-Nov-2018 10:16:17 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[07-Nov-2018 10:16:17 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[07-Nov-2018 10:16:17 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[07-Nov-2018 10:16:17 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[07-Nov-2018 10:16:17 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[07-Nov-2018 10:16:17 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[07-Nov-2018 10:16:17 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[07-Nov-2018 10:16:17 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[07-Nov-2018 10:16:17 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:06:26 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:06:26 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:06:26 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:06:26 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:06:26 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:06:26 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:06:26 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:06:26 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:06:26 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:06:26 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:06:26 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:06:26 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:06:26 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:06:26 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:06:26 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:06:26 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:06:26 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:06:26 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:18:01 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:18:01 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:18:01 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:18:01 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:18:01 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:18:01 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:18:01 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:18:01 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:18:01 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:18:01 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:18:01 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:18:01 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:18:01 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:18:01 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:18:01 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:18:01 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:18:01 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:18:01 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:19:39 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:19:39 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:19:39 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:19:39 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:19:39 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:19:39 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:19:39 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:19:39 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:19:39 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:19:39 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:19:39 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:19:39 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:19:39 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:19:39 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:19:39 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:19:39 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:19:39 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:19:39 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:19:51 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:19:51 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:19:51 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:19:51 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:19:51 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:19:51 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:19:51 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:19:51 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:19:51 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:19:51 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:19:51 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:19:51 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:19:51 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:19:51 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:19:51 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:19:51 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:19:51 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:19:51 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:21:32 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:21:32 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:21:32 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:21:32 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:21:32 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:21:32 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:21:32 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:21:32 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:21:32 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:21:32 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:21:32 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:21:32 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:21:32 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:21:32 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:21:32 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:21:32 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:21:32 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:21:32 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[13-Nov-2018 16:26:59 Europe/London] PHP Notice:  error connecting to  database in /p3t/phpappfolder/includes/sessions_example/app/dependencies.php on line 75
+[13-Nov-2018 16:26:59 Europe/London] PHP Stack trace:
+[13-Nov-2018 16:26:59 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[13-Nov-2018 16:26:59 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[13-Nov-2018 16:26:59 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[13-Nov-2018 16:26:59 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[13-Nov-2018 16:26:59 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[13-Nov-2018 16:26:59 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:26:59 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[13-Nov-2018 16:26:59 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[13-Nov-2018 16:26:59 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[13-Nov-2018 16:26:59 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[13-Nov-2018 16:26:59 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:26:59 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:21-71}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[13-Nov-2018 16:26:59 Europe/London] PHP  13. Slim\Container->get() /p3t/phpappfolder/includes/sessions_example/app/routes/storesessiondetails.php:36
+[13-Nov-2018 16:26:59 Europe/London] PHP  14. Slim\Container->offsetGet() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Container.php:123
+[13-Nov-2018 16:26:59 Europe/London] PHP  15. {closure:/p3t/phpappfolder/includes/sessions_example/app/dependencies.php:58-78}() /p3t/phpappfolder/includes/vendor/pimple/pimple/src/Pimple/Container.php:118
+[13-Nov-2018 16:26:59 Europe/London] PHP  16. trigger_error() /p3t/phpappfolder/includes/sessions_example/app/dependencies.php:75
+[14-Nov-2018 16:15:30 Europe/London] PHP Parse error:  syntax error, unexpected ',' in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 25
+[14-Nov-2018 16:24:27 Europe/London] PHP Parse error:  syntax error, unexpected '$session_model' (T_VARIABLE) in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 22
+[14-Nov-2018 16:24:42 Europe/London] PHP Notice:  Undefined variable: user_name in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 32
+[14-Nov-2018 16:24:42 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:24:42 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:24:42 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:24:42 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:24:42 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:24:42 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:24:42 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:24:42 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:24:42 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:24:42 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:24:42 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:24:42 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:24:42 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-35}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:24:42 Europe/London] PHP Notice:  Undefined variable: password in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 33
+[14-Nov-2018 16:24:42 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:24:42 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:24:42 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:24:42 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:24:42 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:24:42 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:24:42 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:24:42 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:24:42 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:24:42 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:24:42 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:24:42 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:24:42 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-35}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:27:09 Europe/London] PHP Notice:  Undefined variable: user_name in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 31
+[14-Nov-2018 16:27:09 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:27:09 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:27:09 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:27:09 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:27:09 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:27:09 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:27:09 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:27:09 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:27:09 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:27:09 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:27:09 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:27:09 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:27:09 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-34}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:27:09 Europe/London] PHP Notice:  Undefined variable: password in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 32
+[14-Nov-2018 16:27:09 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:27:09 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:27:09 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:27:09 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:27:09 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:27:09 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:27:09 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:27:09 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:27:09 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:27:09 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:27:09 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:27:09 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:27:09 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-34}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:33:15 Europe/London] PHP Notice:  Undefined variable: user_name in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 34
+[14-Nov-2018 16:33:15 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:33:15 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:33:15 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:33:15 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:33:15 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:33:15 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:33:15 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:33:15 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:33:15 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:33:15 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:33:15 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:33:15 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:33:15 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-37}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:33:15 Europe/London] PHP Notice:  Undefined variable: password in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 35
+[14-Nov-2018 16:33:15 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:33:15 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:0
+[14-Nov-2018 16:33:15 Europe/London] PHP   2. include_once() /p3t/phpappfolder/public_php/lab_04/sessions/index.php:8
+[14-Nov-2018 16:33:15 Europe/London] PHP   3. Slim\App->run() /p3t/phpappfolder/includes/sessions_example/bootstrap.php:17
+[14-Nov-2018 16:33:15 Europe/London] PHP   4. Slim\App->process() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:314
+[14-Nov-2018 16:33:15 Europe/London] PHP   5. Slim\App->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:406
+[14-Nov-2018 16:33:15 Europe/London] PHP   6. Slim\App->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:33:15 Europe/London] PHP   7. Slim\Route->run() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/App.php:515
+[14-Nov-2018 16:33:15 Europe/London] PHP   8. Slim\Route->callMiddlewareStack() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:334
+[14-Nov-2018 16:33:15 Europe/London] PHP   9. Slim\Route->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/MiddlewareAwareTrait.php:117
+[14-Nov-2018 16:33:15 Europe/London] PHP  10. Slim\Handlers\Strategies\RequestResponse->__invoke() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Route.php:356
+[14-Nov-2018 16:33:15 Europe/London] PHP  11. call_user_func:{/p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:33:15 Europe/London] PHP  12. Slim\Container->{closure:/p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php:18-37}() /p3t/phpappfolder/includes/vendor/slim/slim/Slim/Handlers/Strategies/RequestResponse.php:41
+[14-Nov-2018 16:36:05 Europe/London] PHP Parse error:  syntax error, unexpected ')' in /p3t/phpappfolder/includes/sessions_example/app/routes/displaysessiondetails.php on line 23
+[14-Nov-2018 16:56:47 Europe/London] PHP Warning:  require(/p3t/phpappfolder/includes/temperature_conversion/app/settings.php): failed to open stream: Permission denied in /p3t/phpappfolder/includes/temperature_conversion/bootstrap.php on line 5
+[14-Nov-2018 16:56:47 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:56:47 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:0
+[14-Nov-2018 16:56:47 Europe/London] PHP   2. include() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:7
+[14-Nov-2018 16:56:47 Europe/London] PHP Fatal error:  require(): Failed opening required '/p3t/phpappfolder/includes/temperature_conversion/app/settings.php' (include_path='.:/p3t/phpappfolder/includes') in /p3t/phpappfolder/includes/temperature_conversion/bootstrap.php on line 5
+[14-Nov-2018 16:56:47 Europe/London] PHP Stack trace:
+[14-Nov-2018 16:56:47 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:0
+[14-Nov-2018 16:56:47 Europe/London] PHP   2. include() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:7
+[14-Nov-2018 17:01:19 Europe/London] PHP Warning:  require(/p3t/phpappfolder/includes/temperature_conversion/app/routes.php): failed to open stream: Permission denied in /p3t/phpappfolder/includes/temperature_conversion/bootstrap.php on line 13
+[14-Nov-2018 17:01:19 Europe/London] PHP Stack trace:
+[14-Nov-2018 17:01:19 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:0
+[14-Nov-2018 17:01:19 Europe/London] PHP   2. include() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:7
+[14-Nov-2018 17:01:19 Europe/London] PHP Fatal error:  require(): Failed opening required '/p3t/phpappfolder/includes/temperature_conversion/app/routes.php' (include_path='.:/p3t/phpappfolder/includes') in /p3t/phpappfolder/includes/temperature_conversion/bootstrap.php on line 13
+[14-Nov-2018 17:01:19 Europe/London] PHP Stack trace:
+[14-Nov-2018 17:01:19 Europe/London] PHP   1. {main}() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:0
+[14-Nov-2018 17:01:19 Europe/London] PHP   2. include() /p3t/phpappfolder/public_php/lab_05/temperature_conversion_public/index.php:7

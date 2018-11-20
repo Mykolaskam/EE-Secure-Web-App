@@ -1,0 +1,22 @@
+{% extends 'layout.html.twig' %}
+{% block title %}Calculation Form{% endblock %}
+{% block content %}
+    <h2>Simple Arithmetic</h2>
+    <h3>Enter values and select calculation type</h3>
+    <form action="index.php/performcalculation" method="post">
+        <label for="val1">Value 1: </label><input id="val1" type="text" name="value1" size="10">
+        <label for="val2">Value 2: </label><input id="val2" type="text" name="value2" size="10">
+        <br><br>
+        <p>Select calculation type:</p>
+        <label for="calctype_addition"><input id="calctype_addition" type="radio" name="calctype" value="addition"
+                                              checked="checked">Add</label>
+        <label for="calctype_subtraction"><input id="calctype_subtraction" type="radio" name="calctype"
+                                                 value="subtraction">Subtract</label>
+        <label for="calctype_multiplication"><input id="calctype_multiplication" type="radio" name="calctype"
+                                                    value="multiplication">Multiply</label>
+        <label for="calctype_division"><input id="calctype_division" type="radio" name="calctype" value="division">Divide</label>
+        <hr>
+        <input type="submit" value="Calculate">
+        <input type="reset" value="Clear">
+    </form>
+{% endblock %}
