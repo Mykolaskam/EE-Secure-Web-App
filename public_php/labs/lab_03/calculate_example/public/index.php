@@ -9,7 +9,7 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-require 'vendor/autoload.php';
+require '../../../../../includes/vendor/autoload.php';
 
 $settings = require __DIR__ . '/../app/settings.php';
 

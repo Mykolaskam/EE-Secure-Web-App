@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/includes/vendor/slim/twig-view" />
+      <path value="$PROJECT_DIR$/includes/vendor/nikic/fast-route" />
+      <path value="$PROJECT_DIR$/includes/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/includes/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/includes/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/includes/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/includes/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/includes/vendor/composer" />
+      <path value="$PROJECT_DIR$/includes/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/includes/vendor/pimple/pimple" />
+      <path value="$PROJECT_DIR$/includes/vendor/container-interop/container-interop" />
+      <path value="$PROJECT_DIR$/includes/vendor/twig/twig" />
+      <path value="$PROJECT_DIR$/includes/vendor/slim/slim" />
+    </include_path>
+  </component>
+</project>

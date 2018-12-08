@@ -3,4 +3,5 @@
 	* PHP program to demonstrate the usage of a soap server
 	*/
 
-	include 'dictionary/bootstrap.php';
+	include '../../../../includes/dictionary/bootstrap.php';
+
