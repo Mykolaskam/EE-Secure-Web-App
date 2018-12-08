@@ -39,7 +39,8 @@ class __TwigTemplate_58cf232aaae2f321557c372e47b4e1a6e527d1d176a427d9116a53b4882
     public function block_content($context, array $blocks = array())
     {
         // line 4
-        echo "    <div class=\"container\">
+        echo "
+    <div class=\"container\">
 
 
         <div class=\"side-panel\">
@@ -56,9 +57,9 @@ class __TwigTemplate_58cf232aaae2f321557c372e47b4e1a6e527d1d176a427d9116a53b4882
 
             <div class=\"logout-container\">
                 <a class=\"logout\" href=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->extensions['Slim\Views\TwigExtension']->baseUrl(), "html", null, true);
-        echo "/login\">Log Out</a>
+        // line 21
+        echo twig_escape_filter($this->env, ($context["logout"] ?? null), "html", null, true);
+        echo "\">Log Out</a>
             </div>
 
         </div>
@@ -228,7 +229,7 @@ class __TwigTemplate_58cf232aaae2f321557c372e47b4e1a6e527d1d176a427d9116a53b4882
 
     public function getDebugInfo()
     {
-        return array (  60 => 20,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  61 => 21,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
