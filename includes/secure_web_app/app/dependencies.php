@@ -13,6 +13,13 @@ $container['view'] = function ($container) {
     return $view;
 };
 
+$container['session_validator'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'Validator.php';
+    $validator = new Validator();
+    return $validator;
+};
+
 $container['dbase'] = function ($container) {
 
     $db_conf = $container['settings']['pdo'];

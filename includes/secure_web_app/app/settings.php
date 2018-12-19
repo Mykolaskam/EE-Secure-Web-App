@@ -12,6 +12,7 @@ $settings = [
     'addContentLengthHeader' => false,
     'mode' => 'development',
     'debug' => true,
+      'class_path' => __DIR__ . '/src/',
     'view' => [
       'template_path' => __DIR__ . '/templates/',
       'twig' => [

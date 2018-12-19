@@ -8,17 +8,19 @@ $app->post('/logincheck', function(Request $request, Response $response)
 
     $arr_tainted_params = $request->getParsedBody();
 
-
-
     $username = $arr_tainted_params['username'];
     $password = $arr_tainted_params['password'];
+
+    $validator = $this->get('session_validator');
+
+    $sanitised_username = $validator->sanitise_email($username);
 
 
     return $this->view->render($response,
         'display.html.twig',
         [
 
-            'username' => $username,
+            'username' => $sanitised_username,
             'password' => $password,
 
         ]);
