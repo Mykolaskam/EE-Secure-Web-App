@@ -8,6 +8,7 @@ $app->get('/', function(Request $request, Response $response)
     return $this->view->render($response,
         'homepage.html.twig',
         [
-            'logout' => 'index.php/login',
+            'logout' => '/SecureWebApp-master/SecureWebApp/public_php/SecureWebApp/index.php/login',
+
         ]);
 })->setName('homepage');
