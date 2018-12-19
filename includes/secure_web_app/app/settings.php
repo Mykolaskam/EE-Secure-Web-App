@@ -15,7 +15,6 @@ $settings = [
     'view' => [
       'template_path' => __DIR__ . '/templates/',
       'twig' => [
-        'cache' => __DIR__ . '/cache/twig',
         'auto_reload' => true
       ],
     ],
