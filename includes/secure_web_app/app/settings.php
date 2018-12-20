@@ -6,6 +6,9 @@ ini_set('display_errors', 'On');
 ini_set('html_errors', 'On');
 ini_set('xdebug.trace_output_name', 'SecureWebApp.%t');
 
+$wsdl = 'https://m2mconnect.ee.co.uk/orange-soap/services/MessgeServiceByCountry?wsdl';
+define('WSDL', $wsdl);
+
 $settings = [
   "settings" => [
     'displayErrorDetails' => true,
