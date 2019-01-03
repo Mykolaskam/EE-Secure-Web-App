@@ -2,8 +2,8 @@ Tasks
 ------------------------------------------------------------
 Vinay
 
-SOAP WORK
-BUILD ACTUAL SERVER AND CONNECTION
+SOAP WORK ------------- DONE
+BUILD ACTUAL SERVER AND CONNECTION ----------------DONE
 HOW TO LOG ALL WEB APP USAGE
 SEND MESSAGE BACK TO USER WITH RECIEPT OF AKNOWLEDGEMENT
 ------------------------------------------------------------
@@ -18,7 +18,7 @@ Mykolas
 
 LOGIN and ADMINISTRATOR PAGE 
 HTML TWIG
-SANITISATION
+SANITISATION 
 COMMENTS IN CODE
 ------------------------------------------------------------
 Everyone
@@ -28,7 +28,7 @@ ie encryption
 good code standard
 validated and optimised code
 PHP EXTENTIONS
-XDEBUG
+XDEBUG ------------------ DONE
 XML to JSON
 SMS Back to circuit board
 AJAX JSON
