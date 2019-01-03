@@ -6,9 +6,12 @@ ini_set('display_errors', 'On');
 ini_set('html_errors', 'On');
 ini_set('xdebug.trace_output_name', 'SecureWebApp.%t');
 
-$wsdl = 'https://m2mconnect.ee.co.uk/orange-soap/services/MessgeServiceByCountry?wsdl';
+$m2muser = '18vtailor';
+$m2mpass = 'L3tm31n123';
+$wsdl = 'https://m2mconnect.ee.co.uk/orange-soap/services/MessageServiceByCountry?wsdl';
 define('WSDL', $wsdl);
-
+define('M2MUSER', $m2muser);
+define('M2MPASS', $m2mpass);
 $settings = [
   "settings" => [
     'displayErrorDetails' => true,

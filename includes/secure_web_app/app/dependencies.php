@@ -42,4 +42,11 @@ $container['dbase'] = function ($container) {
     return $obj_pdo;
 };
 
+$container['msgmodel'] = function ($container){
+    $class_path = $container ->get('settings')['class_path'];
+    require $class_path . 'clientModel.php';
+    $model = new clientModel();
+    return $model;
+};
+
 
