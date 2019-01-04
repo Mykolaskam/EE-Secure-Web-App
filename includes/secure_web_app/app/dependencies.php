@@ -13,11 +13,53 @@ $container['view'] = function ($container) {
     return $view;
 };
 
-$container['session_validator'] = function ($container) {
+$container['validator'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'Validator.php';
     $validator = new Validator();
     return $validator;
+};
+
+$container['session_model'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'SessionModel.php';
+    $session_model = new SessionModel();
+    return $session_model;
+};
+
+$container['hashing_wrapper'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'HashingWrapper.php';
+    $hashing_wrapper = new HashingWrapper();
+    return $hashing_wrapper;
+};
+
+$container['user_model'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'UserModel.php';
+    $model = new UserModel();
+    return $model;
+};
+
+$container['sql_wrapper'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'SQLWrapper.php';
+    $mysql_wrapper = new SQLWrapper();
+    return $mysql_wrapper;
+};
+
+$container['sql_queries'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'SQLQueries.php';
+    $sql_queries = new SQLQueries();
+    return $sql_queries;
+};
+
+$container['sql_model'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'SQLModel.php';
+    $sql_model = new SQLModel();
+    return $sql_model;
 };
 
 $container['dbase'] = function ($container) {

@@ -41,7 +41,7 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
         // line 4
         echo "<div class=\"container\">
 
-        <h1>Secure Web App</h1>
+   
 
         <form action=\"";
         // line 8

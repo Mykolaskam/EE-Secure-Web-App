@@ -51,6 +51,10 @@ class __TwigTemplate_e92d0c451f02197e993814e44425d2c28147c8afb45f1d8e2c194c1e0ed
         // line 9
         echo twig_escape_filter($this->env, ($context["password"] ?? null), "html", null, true);
         echo "</h4>
+        <h4>sql: ";
+        // line 10
+        echo twig_escape_filter($this->env, ($context["sql"] ?? null), "html", null, true);
+        echo "</h4>
       
 
           
@@ -72,7 +76,7 @@ class __TwigTemplate_e92d0c451f02197e993814e44425d2c28147c8afb45f1d8e2c194c1e0ed
 
     public function getDebugInfo()
     {
-        return array (  52 => 9,  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  56 => 10,  52 => 9,  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
