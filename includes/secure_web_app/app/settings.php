@@ -1,6 +1,8 @@
 <?php
 
 define('DIRSEP', DIRECTORY_SEPARATOR);
+define ('BCRYPT_ALGO', PASSWORD_DEFAULT);
+define ('BCRYPT_COST', 12);
 
 ini_set('display_errors', 'On');
 ini_set('html_errors', 'On');

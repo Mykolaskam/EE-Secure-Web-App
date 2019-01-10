@@ -60,7 +60,40 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
                 <label>Password</label>
             </div>
 
-            <button type=\"submit\" class=\"btn-blue\" name=\"add\">Login</button>
+            <button type=\"submit\" class=\"btn-blue\" name=\"login\">Login</button>
+
+
+        </form>
+
+
+         <form action=\"";
+        // line 28
+        echo twig_escape_filter($this->env, ($context["action_register"] ?? null), "html", null, true);
+        echo "\" method=\"post\">
+
+            <h2>Sign In</h2>
+
+            <div class=\"text-wrapper\">
+                <input class=\"input\" type=\"text\" name=\"username\" />
+                <label>Username</label>
+            </div>
+
+            <div class=\"text-wrapper\">
+                <input class=\"input\" type=\"password\" name=\"password\" />
+                <label>Password</label>
+            </div>
+
+            <div class=\"text-wrapper\">
+                <input class=\"input\" type=\"text\" name=\"name\" />
+                <label>name</label>
+            </div>
+
+            <div class=\"text-wrapper\">
+                <input class=\"input\" type=\"text\" name=\"surname\" />
+                <label>surname</label>
+            </div>
+
+            <button type=\"submit\" class=\"btn-blue\" name=\"register\">Register</button>
 
 
         </form>
@@ -82,7 +115,7 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
 
     public function getDebugInfo()
     {
-        return array (  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  71 => 28,  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
     }
 
     public function getSourceContext()

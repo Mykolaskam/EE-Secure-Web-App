@@ -6,6 +6,8 @@
  * Time: 17:04
  */
 
+session_start();
+
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 

@@ -27,18 +27,25 @@ $container['session_model'] = function ($container) {
     return $session_model;
 };
 
-$container['hashing_wrapper'] = function ($container) {
+$container['session_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
-    require $class_path . 'HashingWrapper.php';
-    $hashing_wrapper = new HashingWrapper();
-    return $hashing_wrapper;
+    require $class_path . 'SessionWrapper.php';
+    $session_wrapper = new SessionWrapper();
+    return $session_wrapper;
+};
+
+$container['bcrypt_wrapper'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'BcryptWrapper.php';
+    $bcrypt_wrapper = new BcryptWrapper();
+    return $bcrypt_wrapper;
 };
 
 $container['user_model'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'UserModel.php';
-    $model = new UserModel();
-    return $model;
+    $user_model = new UserModel();
+    return $user_model;
 };
 
 $container['sql_wrapper'] = function ($container) {

@@ -6,34 +6,37 @@ use \Psr\Http\Message\ResponseInterface as Response;
 $app->post('/logincheck', function(Request $request, Response $response)
 {
     
-
     $arr_tainted_params = $request->getParsedBody();
 
-    $this->validator = $this->get('validator');
+    $validator = $this->get('validator');
 
     $username = $arr_tainted_params['username'];
     $password = $arr_tainted_params['password'];
 
     $sanitised_username = $validator->sanitise_string($username);
-    $validated_password = $validator->sanitise_string($password);
+    $sanitised_password = $validator->sanitise_string($password);
 
-    $this->db_handle = $this->get('dbase');
-    $this->validator = $this->get('validator');
-    $this->sql_queries = $this->get('sql_queries');
-    $this->sql_wrapper = $this->get('sql_wrapper');
-    $this->sql_model = $this->get('sql_model');
-    $this->user_model = $this->get('user_model');
-    $this->session_model = $this->get('session_model');
-    $this->hashing_wrpapper = $this->get('hashing_wrapper');
+    $session_wrapper = $this->get('session_wrapper');
+    $wrapper_sql = $this->get('sql_wrapper');
+    $db_handle = $this->get('dbase');
+    $sql_queries = $this->get('sql_queries');
+    $session_model = $this->get('session_model');
 
+    $session_model->set_session_values($sanitised_username, $sanitised_password);
+    $session_model->set_wrapper_session_db($wrapper_sql);
+    $session_model->set_db_handle($db_handle);
+    $session_model->set_sql_queries($sql_queries);
+    $session_model->store_data();
+    $store_result = $session_model->get_storage_result();
+    var_dump($store_result);
 
-
+    $sid = session_id();
 
     return $this->view->render($response,
         'display.html.twig',
         [
             'username' => $sanitised_username,
             'password' => $password,
-            'sql' => $login,
+            'sql' => $sid,
         ]);
 })->setName('logincheck');

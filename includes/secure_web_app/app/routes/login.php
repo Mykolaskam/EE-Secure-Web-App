@@ -10,6 +10,7 @@ $app->get('/', function(Request $request, Response $response)
         'login.html.twig',
         [
             'action_login' => '/SecureWebApp-master/SecureWebApp/public_php/SecureWebApp/index.php/logincheck',
+            'action_register' => '/SecureWebApp-master/SecureWebApp/public_php/SecureWebApp/index.php/register',
 
         ]);
         
