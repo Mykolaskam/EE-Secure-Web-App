@@ -28,8 +28,9 @@ $app->post('/logincheck', function(Request $request, Response $response)
     $session_model->set_db_handle($db_handle);
     $session_model->set_sql_queries($sql_queries);
     $session_model->store_data();
+    var_dump($session_model);
     $store_result = $session_model->get_storage_result();
-    //var_dump($store_result);
+    var_dump($store_result);
 
     $sid = session_id();
 
