@@ -36,12 +36,6 @@ $app->post('/logincheck', function(Request $request, Response $response)
     $wrapper_sql->set_db_handle($db_handle);
     $wrapper_sql->set_sql_queries($sql_queries);
 
-
-
-    var_dump($sanitised_username);
-    var_dump($sanitised_password);
-
-    var_dump($wrapper_sql->user_var_exists($sanitised_username));
 /*
     if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
        echo 'yes';

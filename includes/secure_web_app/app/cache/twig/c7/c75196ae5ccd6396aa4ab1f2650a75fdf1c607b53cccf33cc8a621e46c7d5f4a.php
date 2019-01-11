@@ -51,7 +51,7 @@ class __TwigTemplate_e92d0c451f02197e993814e44425d2c28147c8afb45f1d8e2c194c1e0ed
         // line 9
         echo twig_escape_filter($this->env, ($context["password"] ?? null), "html", null, true);
         echo "</h4>
-        <h4>sql: ";
+        <h4>Other info: ";
         // line 10
         echo twig_escape_filter($this->env, ($context["sql"] ?? null), "html", null, true);
         echo "</h4>
