@@ -91,22 +91,22 @@ class __TwigTemplate_ca76b862db2734c0fce84cdecf436835c3d50e4051c0e8d56a6591a3e8a
              <div class=\"message-boxes\">
                 <div class=\"col\">
                       <h4>Switch 1</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
 
                 <div class=\"col\">
                       <h4>Switch 2</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
 
                 <div class=\"col\">
                       <h4>Switch 3</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
 
                 <div class=\"col\">
                       <h4>Switch 4</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
             </div>
 
@@ -115,17 +115,17 @@ class __TwigTemplate_ca76b862db2734c0fce84cdecf436835c3d50e4051c0e8d56a6591a3e8a
              <div class=\"message-boxes\">
                 <div class=\"col\">
                       <h4>Temperature</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
 
                 <div class=\"col\">
                       <h4>Fan</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
 
                 <div class=\"col\">
                       <h4>Last Number</h4>
-                      <p>ON</p>
+                      <p class=\"message-status\">ON</p>
                 </div>
             </div>
             

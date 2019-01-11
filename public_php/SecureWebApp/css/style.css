@@ -171,6 +171,10 @@ h3 {
     width: 100%;
 }
 
+.message-status {
+    color: rgb(0, 122, 255);
+}
+
 .message-phone-number {
     margin: 10px 15px
 }
