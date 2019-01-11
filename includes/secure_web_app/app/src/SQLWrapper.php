@@ -86,14 +86,9 @@ class SQLWrapper
 
     $this->safe_query($m_query_string, $m_arr_query_parameters);
 
-    //return $this->safe_fetch_array()['password'];
-
     $password = $this->safe_fetch_array()['password'];
-    var_dump($password);
     return $password;
 
-  
-    
   }
 
 
