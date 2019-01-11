@@ -32,11 +32,9 @@ class SQLQueries
 
 	public static function check_user_exists()
 	{
-	  $m_query_string  = "SELECT username";
+	  $m_query_string  = "SELECT password ";
 	  $m_query_string .= "FROM users ";
 	  $m_query_string .= "WHERE username = :local_username ";
-	  $m_query_string .= "AND password = :local_password ";
-	  $m_query_string .= "LIMIT 1";
 	  return $m_query_string;
 	}
 

@@ -21,6 +21,7 @@ $app->post('/logincheck', function(Request $request, Response $response)
     $db_handle = $this->get('dbase');
     $sql_queries = $this->get('sql_queries');
     $session_model = $this->get('session_model');
+    $bcrypt = $this->get('bcrypt_wrapper');
 
     $session_model->set_session_values($sanitised_username, $sanitised_password);
     $session_model->set_wrapper_session_db($wrapper_sql);
@@ -28,9 +29,29 @@ $app->post('/logincheck', function(Request $request, Response $response)
     $session_model->set_sql_queries($sql_queries);
     $session_model->store_data();
     $store_result = $session_model->get_storage_result();
-    var_dump($store_result);
+    //var_dump($store_result);
 
     $sid = session_id();
+
+    $wrapper_sql->set_db_handle($db_handle);
+    $wrapper_sql->set_sql_queries($sql_queries);
+
+
+
+    var_dump($sanitised_username);
+    var_dump($sanitised_password);
+
+    var_dump($wrapper_sql->user_var_exists($sanitised_username));
+/*
+    if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
+       echo 'yes';
+    } else {
+        echo 'no';
+    }
+
+*/
+
+
 
     return $this->view->render($response,
         'display.html.twig',

@@ -71,7 +71,7 @@ class UserModel
       $this->c_obj_wrapper_user_db->set_db_handle( $this->c_obj_db_handle);
       $this->c_obj_wrapper_user_db->set_sql_queries( $this->c_obj_sql_queries);
   
-      $m_store_result = $this->c_obj_wrapper_user_db->create_user_var($this->c_username, $this->c_password, $this->c_name, $this->c_username);
+      $m_store_result = $this->c_obj_wrapper_user_db->create_user_var($this->c_username, $this->c_password, $this->c_name, $this->c_surname);
 
       return $m_store_result;
     }
