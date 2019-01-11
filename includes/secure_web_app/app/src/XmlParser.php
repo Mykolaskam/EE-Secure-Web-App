@@ -80,7 +80,7 @@ class XmlParser
     if (array_key_exists($this->element_name, $this->arr_parsed_data) === false)
     {
       $this->arr_parsed_data[$this->element_name] = $element_data;
-      if (sizeof($this->arr_temporary_attributes) > 0)
+      if (isset($this->arr_temporary_attributes) && count($this->arr_temporary_attributes) > 0)
       {
         foreach ($this->arr_temporary_attributes as $tag_att_name => $tag_att_value)
         {
