@@ -89,7 +89,7 @@ class SQLWrapper
     $this->safe_query($m_query_string, $m_arr_query_parameters);
   }
 
-  private function create_user_var($p_username, $p_password, $p_name, $p_surname)
+  public function create_user_var($p_username, $p_password, $p_name, $p_surname)
   {
     $m_query_string = $this->c_obj_sql_queries->create_new_user();
 
@@ -97,7 +97,7 @@ class SQLWrapper
       ':local_username' => $p_username,
       ':local_password' => $p_password,
       ':local_name' => $p_name,
-      ':local_name' => $p_surname
+      ':local_surname' => $p_surname
     ];
 
     $this->safe_query($m_query_string, $m_arr_query_parameters);

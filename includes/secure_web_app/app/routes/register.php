@@ -31,6 +31,7 @@ $app->post('/register', function(Request $request, Response $response)
     $user_model = $this->get('user_model');
 
     $user_model->set_user_values($validated_username, $hashed_password, $validated_name, $validated_surname);
+    $user_model->set_wrapper_user_db($wrapper_sql);
     $user_model->set_db_handle($db_handle);
     $user_model->set_sql_queries($sql_queries);
     $user_model->store_data();

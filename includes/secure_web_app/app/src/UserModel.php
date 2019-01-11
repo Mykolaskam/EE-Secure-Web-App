@@ -13,8 +13,7 @@ class UserModel
     private $c_name;
     private $c_surname;
     private $c_arr_storage_result;
-    private $c_obj_wrapper_session_file;
-    private $c_obj_wrapper_session_db;
+    private $c_obj_wrapper_user_db;
     private $c_obj_db_handle;
     private $c_obj_sql_queries;
   
@@ -25,8 +24,7 @@ class UserModel
       $this->c_name = null;
       $this->c_surname = null;
       $this->c_arr_storage_result = null;
-      $this->c_obj_wrapper_session_file = null;
-      $this->c_obj_wrapper_session_db = null;
+      $this->c_obj_wrapper_user_db = null;
       $this->c_obj_db_handle = null;
       $this->c_obj_sql_queries = null;
     }
@@ -41,6 +39,10 @@ class UserModel
       $this->c_surname = $p_surname;
     }
   
+    public function set_wrapper_user_db($p_obj_wrapper_db)
+    {
+      $this->c_obj_wrapper_user_db = $p_obj_wrapper_db;
+    }
   
     public function set_db_handle($p_obj_db_handle)
     {
@@ -66,10 +68,10 @@ class UserModel
     {
       $m_store_result = false;
   
-      $this->c_obj_wrapper_session_db->set_db_handle( $this->c_obj_db_handle);
-      $this->c_obj_wrapper_session_db->set_sql_queries( $this->c_obj_sql_queries);
+      $this->c_obj_wrapper_user_db->set_db_handle( $this->c_obj_db_handle);
+      $this->c_obj_wrapper_user_db->set_sql_queries( $this->c_obj_sql_queries);
   
-      $m_store_result = $this->c_obj_wrapper_session_db->create_user_var($this->c_username, $this->c_password, $this->c_name, $this->c_username);
+      $m_store_result = $this->c_obj_wrapper_user_db->create_user_var($this->c_username, $this->c_password, $this->c_name, $this->c_username);
 
       return $m_store_result;
     }
