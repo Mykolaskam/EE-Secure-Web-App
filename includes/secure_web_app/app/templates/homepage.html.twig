@@ -2,175 +2,101 @@
 {% block title %} Homepage {% endblock %}
 {% block content %}
 
-    <div class="container">
+<div class="container">
 
 
-        <div class="side-panel">
+    <div class="side-panel">
 
-            <div class="user-profile-container">
-                <img class="my-profile-image" src="media/head.png" alt="your profile image">
-                <div class="my-profile-name">Mykolas Kaminskas</div>
+        <div class="user-profile-container">
+            <h3 class="ee">EE M2M</h3>
+            <div class="my-profile-name">Mykolas Kaminskas</div>
+        </div>
+
+        <div class="menu-options-container">
+            <a class="menu-option" href="#"><i class="far fa-comment-alt"></i>Messages</a>
+            <a class="menu-option" href="#"><i class="fas fa-cog"></i>Settings</a>
+        </div>
+
+        <div class="logout-container">
+            <a class="logout" href="{{ logout }}">Log Out</a>
+        </div>
+
+    </div>
+
+
+    <main>
+
+
+        <h1>Messages</h1>
+
+        <div class="line"></div>
+
+        <div class="message-box">
+
+            <div class="date-time">
+
+                <h5 class="time">22:34</h5>
+                <h5 class="date">11/01/2019</h5>
+
             </div>
 
-            <div class="menu-options-container">
-                <a class="menu-option" href="#"><i class="far fa-comment-alt"></i>Messages</a>
-                <a class="menu-option" href="#"><i class="fas fa-cog"></i>Settings</a>
+            <div class="message-container">
+                <h2 class="message-name">18-3110-AN</h2>
+                <h3 class="message-phone-number">+44 234286678</h3>
             </div>
 
-            <div class="logout-container">
-                <a class="logout" href="{{ logout }}">Log Out</a>
+            <div class="line2"></div>
+
+             <div class="message-boxes">
+                <div class="col">
+                      <h4>Switch 1</h4>
+                      <p>ON</p>
+                </div>
+
+                <div class="col">
+                      <h4>Switch 2</h4>
+                      <p>ON</p>
+                </div>
+
+                <div class="col">
+                      <h4>Switch 3</h4>
+                      <p>ON</p>
+                </div>
+
+                <div class="col">
+                      <h4>Switch 4</h4>
+                      <p>ON</p>
+                </div>
             </div>
 
+            <div class="line2"></div>
+
+             <div class="message-boxes">
+                <div class="col">
+                      <h4>Temperature</h4>
+                      <p>ON</p>
+                </div>
+
+                <div class="col">
+                      <h4>Fan</h4>
+                      <p>ON</p>
+                </div>
+
+                <div class="col">
+                      <h4>Last Number</h4>
+                      <p>ON</p>
+                </div>
+            </div>
+            
+
+
+            
         </div>
 
 
-        <main>
-            
 
-            <h1>Messages</h1>
-
-            <div class="line"></div>
-
-            <div class="message-box">
-
-                <div class="profile-image-container">
-                    <img class="profile-picture" src="media/profile.png" alt="profile picture">
-                </div>
-
-                <div class="message-content-container">
-
-                    <h2 class="sende-name">Mykolas Kaminskas</h2>
-
-                    <h3 class="sender-mobile">+44 1238637452</h3>
-                    <h3 class="sender-email">mykolaskam@example.com</h3>
-
-                    <div class="line2"></div>
-
-                    <p class="message">Happy new year!!!</p>
-
-                </div>
-
-                <div class="date-time-container">
-
-                    <h3 class="date-time"> 23:59 31 Dec</h3>
-
-                </div>
-
-            </div>
-
-            <div class="message-box">
-
-                <div class="profile-image-container">
-                    <img class="profile-picture" src="media/profile.png" alt="profile picture">
-                </div>
-
-                <div class="message-content-container">
-
-                    <h2 class="sende-name">Mykolas Kaminskas</h2>
-
-                    <h3 class="sender-mobile">+44 1238637452</h3>
-                    <h3 class="sender-email">mykolaskam@example.com</h3>
-
-                    <div class="line2"></div>
-
-                    <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam sequi
-                        ullam aperiam est vitae expedita, corporis quaerat quam earum nam nobis nihil labore natus
-                        similique! Nam temporibus quasi eius.</p>
-
-                </div>
-
-                <div class="date-time-container">
-
-                    <h3 class="date-time"> 23:59 31 Dec</h3>
-
-                </div>
-
-            </div>
-
-            <div class="message-box">
-
-                    <div class="profile-image-container">
-                        <img class="profile-picture" src="media/profile.png" alt="profile picture">
-                    </div>
-    
-                    <div class="message-content-container">
-    
-                        <h2 class="sende-name">Mykolas Kaminskas</h2>
-    
-                        <h3 class="sender-mobile">+44 1238637452</h3>
-                        <h3 class="sender-email">mykolaskam@example.com</h3>
-    
-                        <div class="line2"></div>
-    
-                        <p class="message">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class="date-time-container">
-    
-                        <h3 class="date-time"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
-
-            <div class="message-box">
-
-                    <div class="profile-image-container">
-                        <img class="profile-picture" src="media/profile.png" alt="profile picture">
-                    </div>
-    
-                    <div class="message-content-container">
-    
-                        <h2 class="sende-name">Mykolas Kaminskas</h2>
-    
-                        <h3 class="sender-mobile">+44 1238637452</h3>
-                        <h3 class="sender-email">mykolaskam@example.com</h3>
-    
-                        <div class="line2"></div>
-    
-                        <p class="message">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class="date-time-container">
-    
-                        <h3 class="date-time"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
-
-            <div class="message-box">
-
-                    <div class="profile-image-container">
-                        <img class="profile-picture" src="media/profile.png" alt="profile picture">
-                    </div>
-    
-                    <div class="message-content-container">
-    
-                        <h2 class="sende-name">Mykolas Kaminskas</h2>
-    
-                        <h3 class="sender-mobile">+44 1238637452</h3>
-                        <h3 class="sender-email">mykolaskam@example.com</h3>
-    
-                        <div class="line2"></div>
-    
-                        <p class="message">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class="date-time-container">
-    
-                        <h3 class="date-time"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
+    </main>
 
 
-        </main>
-
-
-    </div>
+</div>
 {% endblock %}

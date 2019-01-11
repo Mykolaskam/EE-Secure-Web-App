@@ -48,7 +48,17 @@ $app->post('/logincheck', function(Request $request, Response $response)
         ]);
 
     } else {
-        echo 'no';
+        
+        return $this->view->render($response,
+        'login.html.twig',
+        [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string('Incorrect username or password'),
+            'action_login' => '/SecureWebApp/index.php/logincheck',
+            'action_register' => '/SecureWebApp/index.php/register',
+
+        ]);
+
     }
 
 

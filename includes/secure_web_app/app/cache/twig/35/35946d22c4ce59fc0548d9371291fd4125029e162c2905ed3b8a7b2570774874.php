@@ -65,9 +65,14 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
 
         </form>
 
+        <h4>";
+        // line 27
+        echo twig_escape_filter($this->env, ($context["error_message"] ?? null), "html", null, true);
+        echo "</h4>
+
 
          <form action=\"";
-        // line 28
+        // line 30
         echo twig_escape_filter($this->env, ($context["action_register"] ?? null), "html", null, true);
         echo "\" method=\"post\">
 
@@ -115,7 +120,7 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
 
     public function getDebugInfo()
     {
-        return array (  71 => 28,  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  76 => 30,  70 => 27,  48 => 8,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
