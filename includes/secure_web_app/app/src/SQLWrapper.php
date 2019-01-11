@@ -84,7 +84,9 @@ class SQLWrapper
       ':local_username' => $p_username
     ];
 
-    return $this->safe_query($m_query_string, $m_arr_query_parameters);
+    echo safe_query($m_query_string, $m_arr_query_parameters);
+
+    $this->safe_query($m_query_string, $m_arr_query_parameters);
     
   }
 
