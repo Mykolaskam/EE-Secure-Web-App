@@ -39,7 +39,15 @@ $app->post('/logincheck', function(Request $request, Response $response)
 
 
     if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
-       echo 'yes';
+
+        return $this->view->render($response,
+        'homepage.html.twig',
+        [
+            'css_path' => CSS_PATH,
+            'logout' => '/SecureWebApp/index.php/login',
+
+        ]);
+
     } else {
         echo 'no';
     }
