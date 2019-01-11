@@ -41,6 +41,7 @@ $app->post('/register', function(Request $request, Response $response)
     return $this->view->render($response,
         'display.html.twig',
         [
+            'css_path' => CSS_PATH,
             'username' => $validated_username,
             'password' =>  $hashed_password,
             'sql' => $validated_name . $validated_surname,

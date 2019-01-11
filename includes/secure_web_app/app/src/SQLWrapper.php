@@ -84,9 +84,15 @@ class SQLWrapper
       ':local_username' => $p_username
     ];
 
-    echo safe_query($m_query_string, $m_arr_query_parameters);
-
     $this->safe_query($m_query_string, $m_arr_query_parameters);
+
+    //return $this->safe_fetch_array()['password'];
+
+    $password = $this->safe_fetch_array()['password'];
+    var_dump($password);
+    return $password;
+
+  
     
   }
 
@@ -186,6 +192,24 @@ class SQLWrapper
     $m_arr_row = $this->c_obj_stmt->fetch(PDO::FETCH_ASSOC);
     $this->c_obj_stmt->closeCursor();
     return $m_arr_row;
+  }
+
+  public function get_password ($p_username) {
+
+    $m_query_string = $this->c_obj_sql_queries->check_user_exists();
+
+    $m_arr_query_parameters = [
+      ':local_username' => $p_username
+    ];
+
+    $this->safe_query($m_query_string);
+    $arr_password =$this->safe_fetch_array();
+    $m_password = $arr_password['password'];
+
+    var_dump($m_password);
+        return $m_password;
+  
+
   }
 
   public function last_inserted_ID()

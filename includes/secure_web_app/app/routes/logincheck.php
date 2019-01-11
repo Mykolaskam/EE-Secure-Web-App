@@ -36,20 +36,21 @@ $app->post('/logincheck', function(Request $request, Response $response)
     $wrapper_sql->set_db_handle($db_handle);
     $wrapper_sql->set_sql_queries($sql_queries);
 
-/*
+
     if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
        echo 'yes';
     } else {
         echo 'no';
     }
 
-*/
+
 
 
 
     return $this->view->render($response,
         'display.html.twig',
         [
+            'css_path' => CSS_PATH,
             'username' => $sanitised_username,
             'password' => $password,
             'sql' => $sid,

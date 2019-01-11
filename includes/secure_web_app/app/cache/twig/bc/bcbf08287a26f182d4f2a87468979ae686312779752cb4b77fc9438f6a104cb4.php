@@ -32,7 +32,10 @@ class __TwigTemplate_83148c2e37a4655c05808bdd65ec78bf2a304863e2245b6091896e1d3ce
         $this->displayBlock('title', $context, $blocks);
         echo "</title>
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"css/style.css\" />
+    <link rel=\"stylesheet\" type=\"text/css\" media=\"screen\" href=\"";
+        // line 8
+        echo twig_escape_filter($this->env, ($context["css_path"] ?? null), "html", null, true);
+        echo "\" />
     <link rel=\"stylesheet\" href=\"https://use.fontawesome.com/releases/v5.5.0/css/all.css\" integrity=\"sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU\" crossorigin=\"anonymous\">
     <link href=\"https://fonts.googleapis.com/css?family=Roboto:300,400,500\" rel=\"stylesheet\">
 </head>
@@ -62,9 +65,14 @@ class __TwigTemplate_83148c2e37a4655c05808bdd65ec78bf2a304863e2245b6091896e1d3ce
         return "layout.html.twig";
     }
 
+    public function isTraitable()
+    {
+        return false;
+    }
+
     public function getDebugInfo()
     {
-        return array (  56 => 14,  51 => 6,  45 => 15,  43 => 14,  32 => 6,  25 => 1,);
+        return array (  59 => 14,  54 => 6,  48 => 15,  46 => 14,  37 => 8,  32 => 6,  25 => 1,);
     }
 
     public function getSourceContext()
