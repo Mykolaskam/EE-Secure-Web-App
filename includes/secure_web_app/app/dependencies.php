@@ -98,4 +98,11 @@ $container['msgmodel'] = function ($container){
     return $model;
 };
 
+$container['xmlmodel'] = function ($container){
+    $class_path = $container ->get('settings')['class_path'];
+    require $class_path . 'XmlParser.php';
+    $model = new XmlParser();
+    return $model;
+};
+
 
