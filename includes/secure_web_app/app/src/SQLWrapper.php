@@ -76,6 +76,19 @@ class SQLWrapper
     return $session_var_exists;
   }
 
+  public function user_var_exists($p_username) {
+
+    $m_query_string = $this->c_obj_sql_queries->check_user_exists();
+  
+    $m_arr_query_parameters = [
+      ':local_username' => $p_username
+    ];
+
+    return $this->safe_query($m_query_string, $m_arr_query_parameters);
+    
+  }
+
+
   private function create_session_var($p_session_key, $p_session_value)
   {
     $m_query_string = $this->c_obj_sql_queries->create_session_var();
