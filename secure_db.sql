@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 10, 2019 at 09:06 PM
+-- Generation Time: Jan 11, 2019 at 05:41 PM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -37,8 +37,10 @@ CREATE TABLE `session` (
 --
 
 INSERT INTO `session` (`session_id`, `session_var_name`, `session_value`) VALUES
-('gm58n8je4jpmkth8r662g3lq46', 'user_name', 'admin'),
-('gm58n8je4jpmkth8r662g3lq46', 'user_password', 'doll');
+('gm58n8je4jpmkth8r662g3lq46', 'user_name', 'mk'),
+('gm58n8je4jpmkth8r662g3lq46', 'user_password', 'mk'),
+('gm58n8je4jpmkth8r662g3lq46', 'user_name', 'mk'),
+('gm58n8je4jpmkth8r662g3lq46', 'user_password', 'mk');
 
 -- --------------------------------------------------------
 
@@ -49,10 +51,17 @@ INSERT INTO `session` (`session_id`, `session_var_name`, `session_value`) VALUES
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
   `username` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `password` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(100) COLLATE utf8_unicode_ci NOT NULL,
   `name` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
   `surname` varchar(30) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `username`, `password`, `name`, `surname`) VALUES
+(24, 'mk', '$2y$12$aA4uHb8bkV26xhTjStTcVORpGSTxHBKF7prJ4VBKsNWhS.ZdDEd66', '', '');
 
 --
 -- Indexes for dumped tables
@@ -72,7 +81,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
