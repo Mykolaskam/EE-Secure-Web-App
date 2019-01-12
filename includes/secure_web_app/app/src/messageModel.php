@@ -47,8 +47,11 @@ class messageModel
         $this->switches[3] = $parsed_xml_array['S4'];
         $this->fan = $parsed_xml_array['FAN'];
 
-        if ($parsed_xml_array['TEMP']) {
+        if (array_key_exists($parsed_xml_array['TEMP'],$parsed_xml_array)) {
             $this->temp = $parsed_xml_array['TEMP'];
+        }
+        else{
+            $this->temp = 'Not Set';
         }
 
 

@@ -42,7 +42,7 @@ $app->get('/recievemessages',
             $wrapper_sql->create_message_var($source, $destination, $time, $id, $switch1, $switch2, $switch3, $switch4, $fan, $temperature, $key );
 
         }
-;
+
         $message_array = $wrapper_sql->get_messages_var();
             return $this->view->render($response,
                 'homepage.html.twig',
