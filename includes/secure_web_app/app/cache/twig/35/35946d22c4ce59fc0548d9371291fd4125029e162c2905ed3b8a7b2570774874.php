@@ -63,7 +63,7 @@ class __TwigTemplate_d31f43b6f56142adb73ed0b02c96e3d9e6abdbe716227e332b0a2452032
 
         <button type=\"submit\" class=\"btn-blue\" name=\"login\">Login</button>
 
-        <h4>";
+        <h4 class=\"error-msg\">";
         // line 25
         echo twig_escape_filter($this->env, ($context["error_message"] ?? null), "html", null, true);
         echo "</h4>

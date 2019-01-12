@@ -131,14 +131,14 @@ class SQLWrapper
 
     $m_query_string = $this->c_obj_sql_queries->get_messages();
   
-    $m_arr_query_parameters = [
-      
-    ];
+    $m_arr_query_parameters = [];
 
    $this->safe_query($m_query_string, $m_arr_query_parameters);
 
     $message = $this->safe_fetch_all_array();
     return $message;
+
+  // return $this->safe_fetch_array();
 
   }
 

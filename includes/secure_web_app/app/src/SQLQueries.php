@@ -88,7 +88,9 @@ class SQLQueries
 	{
 		$m_query_string  = "SELECT * ";
 		$m_query_string .= "FROM messages ";
+		$m_query_string .= "ORDER BY time DESC ";
 		return $m_query_string;
+		
 	}
 
 	public static function create_message()

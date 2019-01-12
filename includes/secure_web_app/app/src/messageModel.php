@@ -55,8 +55,8 @@ class messageModel
         }
 
 
-        if ($parsed_xml_array['KEY']) {
-            $this->key = $parsed_xml_array['KEY'];
+        if ($parsed_xml_array['KP']) {
+            $this->key = $parsed_xml_array['KP'];
         }
     }
 
