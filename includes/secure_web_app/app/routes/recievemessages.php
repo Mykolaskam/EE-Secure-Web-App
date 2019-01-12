@@ -26,7 +26,6 @@ $app->get('/recievemessages',
             $xml_model->set_xml_string_to_parse($item);
             $xml_model->parse_the_xml_string();
             $msgmodel->setParameters($xml_model->get_parsed_data());
-            $message_array[] = $msgmodel;
 
             $source = $validator->sanitise_string($msgmodel->getSource());
             $destination = $validator->sanitise_string( $msgmodel->getDestination());
@@ -41,11 +40,10 @@ $app->get('/recievemessages',
             $key = $validator->sanitise_string($msgmodel->getKey());
             
             $wrapper_sql->create_message_var($source, $destination, $time, $id, $switch1, $switch2, $switch3, $switch4, $fan, $temperature, $key );
-            
 
         }
 ;
-        var_dump($wrapper_sql->get_messages_var());
+        $message_array = $wrapper_sql->get_messages_var();
             return $this->view->render($response,
                 'homepage.html.twig',
                 [
