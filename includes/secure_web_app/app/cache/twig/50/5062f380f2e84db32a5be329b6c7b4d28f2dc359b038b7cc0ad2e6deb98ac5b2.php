@@ -33,7 +33,7 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
     {
         // line 3
         echo "
-    <div class=\"container\">
+<div class=\"main-container\">
 
 
         <div class=\"side-panel\">
@@ -43,10 +43,13 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
                 <div class=\"my-profile-name\">Mykolas Kaminskas</div>
             </div>
 
-            <div class=\"menu-options-container\">
-                <a class=\"menu-option\" href=\"#\"><i class=\"far fa-comment-alt\"></i>Messages</a>
-                <a class=\"menu-option\" href=\"#\"><i class=\"fas fa-cog\"></i>Settings</a>
-            </div>
+        <div class=\"menu-options-container\">
+            <a class=\"menu-option\" href=\"#\"><i class=\"far fa-comment-alt\"></i>Messages</a>
+            <a class=\"menu-option\" href=\"";
+        // line 16
+        echo twig_escape_filter($this->env, ($context["register"] ?? null), "html", null, true);
+        echo "\"><i class=\"fas fa-user-plus\"></i>Add User</a>
+        </div>
 
             <div class=\"logout-container\">
                 <a class=\"logout\" href=\"";
@@ -191,7 +194,7 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
 
     public function getDebugInfo()
     {
-        return array (  170 => 95,  155 => 86,  147 => 81,  139 => 76,  127 => 67,  119 => 62,  111 => 57,  103 => 52,  92 => 44,  88 => 43,  80 => 38,  74 => 34,  70 => 33,  54 => 20,  35 => 3,  32 => 2,  15 => 1,);
+        return array (  173 => 95,  158 => 86,  150 => 81,  142 => 76,  130 => 67,  122 => 62,  114 => 57,  106 => 52,  95 => 44,  91 => 43,  83 => 38,  77 => 34,  73 => 33,  57 => 20,  50 => 16,  35 => 3,  32 => 2,  15 => 1,);
     }
 
     public function getSourceContext()

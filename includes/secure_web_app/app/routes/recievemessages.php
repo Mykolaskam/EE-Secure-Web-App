@@ -17,7 +17,8 @@ $app->get('/recievemessages',
     $soap_model->setAllParameters($username,$password,'18-3110-AN');
     $data = $soap_model->retrieveMessages();
     $message_array = [];
-
+        $wrapper_sql->set_db_handle($db_handle);
+        $wrapper_sql->set_sql_queries($sql_queries);
         foreach($data as $item) {
             $msgmodel =  $this->get('msgmodel');
             $xml_model = $this->get('xmlmodel');
@@ -25,7 +26,6 @@ $app->get('/recievemessages',
             $xml_model->set_xml_string_to_parse($item);
             $xml_model->parse_the_xml_string();
             $msgmodel->setParameters($xml_model->get_parsed_data());
-            var_dump($msgmodel);
             $message_array[] = $msgmodel;
 
             $source = $validator->sanitise_string($msgmodel->getSource());
@@ -39,17 +39,13 @@ $app->get('/recievemessages',
             $fan = $validator->sanitise_string($msgmodel->getFan());
             $temperature = $validator->sanitise_string($msgmodel->getTemp());
             $key = $validator->sanitise_string($msgmodel->getKey());
-
-            $wrapper_sql->set_db_handle($db_handle);
-            $wrapper_sql->set_sql_queries($sql_queries);
             
             $wrapper_sql->create_message_var($source, $destination, $time, $id, $switch1, $switch2, $switch3, $switch4, $fan, $temperature, $key );
             
-            var_dump($wrapper_sql->get_messages_var());
-            $wrapper_sql->get_messages_var();
+
         }
 ;
-
+        var_dump($wrapper_sql->get_messages_var());
             return $this->view->render($response,
                 'homepage.html.twig',
                 [

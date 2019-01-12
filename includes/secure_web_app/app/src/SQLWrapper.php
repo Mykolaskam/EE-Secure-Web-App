@@ -135,9 +135,9 @@ class SQLWrapper
       
     ];
 
-    $this->safe_query($m_query_string, $m_arr_query_parameters);
+   $this->safe_query($m_query_string, $m_arr_query_parameters);
 
-    $message = $this->safe_fetch_array();
+    $message = $this->safe_fetch_all_array();
     return $message;
 
   }
@@ -249,6 +249,11 @@ class SQLWrapper
     return $m_arr_row;
   }
 
+  public function safe_fetch_all_array(){
+      $m_arr_row = $this->c_obj_stmt->fetchall(PDO::FETCH_ASSOC);
+      $this->c_obj_stmt->closeCursor();
+      return $m_arr_row;
+  }
 
 
   public function last_inserted_ID()
