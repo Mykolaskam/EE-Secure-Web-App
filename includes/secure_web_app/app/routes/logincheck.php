@@ -37,7 +37,6 @@ $app->post('/logincheck', function(Request $request, Response $response)
 
         $store_result = $session_model->get_storage_result();
 
-
         return $this->view->render($response,
         'homepage.html.twig',
         [

@@ -37,26 +37,85 @@ class messageModel
     }
     public function setParameters($parsed_xml_array)
     {
-        $this->source = $parsed_xml_array['SOURCEMSISDN'];
-        $this->destination = $parsed_xml_array['DESTINATIONMSISDN'];
-        $this->time = $parsed_xml_array['RECEIVEDTIME'];
-        $this->id = $parsed_xml_array['ID'];
-        $this->switches[0] = $parsed_xml_array['S1'];
-        $this->switches[1] = $parsed_xml_array['S2'];
-        $this->switches[2] = $parsed_xml_array['S3'];
-        $this->switches[3] = $parsed_xml_array['S4'];
-        $this->fan = $parsed_xml_array['FAN'];
-
-        if (array_key_exists($parsed_xml_array['TEMP'],$parsed_xml_array)) {
+   
+        if (isset($parsed_xml_array['TEMP'])) {
             $this->temp = $parsed_xml_array['TEMP'];
         }
         else{
             $this->temp = 'Not Set';
         }
 
+        if (isset($parsed_xml_array['SOURCEMSISDN'])) {
+            $this->source = $parsed_xml_array['SOURCEMSISDN'];
+        }
+        else{
+            $this->source = 'Not Set';
+        }
 
-        if ($parsed_xml_array['KP']) {
+        if (isset($parsed_xml_array['DESTINATIONMSISDN'])) {
+            $this->destination = $parsed_xml_array['DESTINATIONMSISDN'];
+        }
+        else{
+            $this->destination = 'Not Set';
+        }
+
+
+        if (isset($parsed_xml_array['RECEIVEDTIME'])) {
+            $this->time = $parsed_xml_array['RECEIVEDTIME'];
+        }
+        else{
+            $this->time = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['ID'])) {
+            $this->id = $parsed_xml_array['ID'];
+        }
+        else{
+            $this->id = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['S1'])) {
+            $this->switches[0] = $parsed_xml_array['S1'];
+        }
+        else{
+            $this->switches[0] = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['S2'])) {
+            $this->switches[1] = $parsed_xml_array['S2'];
+        }
+        else{
+            $this->switches[1] = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['S3'])) {
+            $this->switches[2] = $parsed_xml_array['S3'];
+        }
+        else{
+            $this->switches[2] = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['S4'])) {
+            $this->switches[3] = $parsed_xml_array['S4'];
+        }
+        else{
+            $this->switches[3] = 'Not Set';
+        }
+
+        if (isset($parsed_xml_array['FAN'])) {
+            $this->fan = $parsed_xml_array['FAN'];
+        }
+        else{
+            $this->fan = 'Not Set';
+        }
+
+
+
+        if (isset($parsed_xml_array['KP'])) {
             $this->key = $parsed_xml_array['KP'];
+        }
+        else{
+            $this->key = 'Not Set';
         }
     }
 

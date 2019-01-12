@@ -21,9 +21,9 @@ $app->post('/registercheck', function(Request $request, Response $response)
     $validated_name = $validator->sanitise_string($name);
     $validated_surname = $validator->sanitise_string($surname);
 
-    if ($validator->username_var_exists($validated_name)) {
+    //if ($validator->username_var_exists($validated_name)) {
         
-    }
+    //}
 
     $session_wrapper = $this->get('session_wrapper');
     $wrapper_sql = $this->get('sql_wrapper');

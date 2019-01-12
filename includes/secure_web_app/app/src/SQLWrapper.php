@@ -108,7 +108,7 @@ class SQLWrapper
     {
       $username_var_exists  = true;
     }
-    return $username_var_exists ;
+    return $username_var_exists;
 
   }
 
