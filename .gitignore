@@ -4,3 +4,7 @@ temp/wsdl-cache/wsdl-php-slim-0fdb89f354d3e6d974caf90409be338d67
 \.idea/workspace\.xml
 
 includes/secure_web_app/app/cache/twig/fa/
+
+temp/sessions/
+
+includes/secure_web_app/app/cache/twig/7d/7dd4ac8225dd0e8f75c042b5f18497be73c3649f3481802871ef11fc237e906a\.php

@@ -1,102 +1,104 @@
-{% extends 'layout.html.twig' %}
-{% block title %} Homepage {% endblock %}
+{% extends 'layout.html.twig'%}
 {% block content %}
 
-<div class="container">
+    <div class="container">
 
 
-    <div class="side-panel">
+        <div class="side-panel">
 
-        <div class="user-profile-container">
-            <h3 class="ee">EE M2M</h3>
-            <div class="my-profile-name">Mykolas Kaminskas</div>
+            <div class="user-profile-container">
+                <h3 class="ee">EE M2M</h3>
+                <div class="my-profile-name">Mykolas Kaminskas</div>
+            </div>
+
+            <div class="menu-options-container">
+                <a class="menu-option" href="#"><i class="far fa-comment-alt"></i>Messages</a>
+                <a class="menu-option" href="#"><i class="fas fa-cog"></i>Settings</a>
+            </div>
+
+            <div class="logout-container">
+                <a class="logout" href="{{ logout }}">Log Out</a>
+            </div>
+
         </div>
 
-        <div class="menu-options-container">
-            <a class="menu-option" href="#"><i class="far fa-comment-alt"></i>Messages</a>
-            <a class="menu-option" href="#"><i class="fas fa-cog"></i>Settings</a>
-        </div>
 
-        <div class="logout-container">
-            <a class="logout" href="{{ logout }}">Log Out</a>
-        </div>
+        <main>
+
+
+            <h1>Messages</h1>
+
+            <div class="line"></div>
+
+            {% for messages in message_array%}
+                <div class="message-box">
+
+                    <div class="date-time">
+
+                        <h5 class="date">{{messages.getTime}}</h5>
+
+                    </div>
+
+                    <div class="message-container">
+                        <h2 class="message-name">{{messages.getId}}</h2>
+                        <h3 class="message-phone-number">{{messages.getSource}}</h3>
+                    </div>
+
+                    <div class="line2"></div>
+
+                    <div class="message-boxes">
+                        <div class="col">
+                            <h4>Switch 1</h4>
+                            <p class="message-status">{{messages.getSwitch1}}</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Switch 2</h4>
+                            <p class="message-status">{{messages.getSwitch2}}</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Switch 3</h4>
+                            <p class="message-status">{{messages.getSwitch3}}</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Switch 4</h4>
+                            <p class="message-status">{{messages.getSwitch4}}</p>
+                        </div>
+                    </div>
+
+                    <div class="line2"></div>
+
+                    <div class="message-boxes">
+                        <div class="col">
+                            <h4>Temperature</h4>
+                            <p class="message-status">{{messages.getTemp}}</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Fan</h4>
+                            <p class="message-status">{{messages.getFan}}</p>
+                        </div>
+
+                        <div class="col">
+                            <h4>Last Number</h4>
+                            <p class="message-status">{{messages.getKey}}</p>
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+            {% endfor %}
 
     </div>
-
-
-    <main>
-
-
-        <h1>Messages</h1>
-
-        <div class="line"></div>
-
-        <div class="message-box">
-
-            <div class="date-time">
-
-                <h5 class="time">22:34</h5>
-                <h5 class="date">11/01/2019</h5>
-
-            </div>
-
-            <div class="message-container">
-                <h2 class="message-name">18-3110-AN</h2>
-                <h3 class="message-phone-number">+44 234286678</h3>
-            </div>
-
-            <div class="line2"></div>
-
-             <div class="message-boxes">
-                <div class="col">
-                      <h4>Switch 1</h4>
-                      <p class="message-status">ON</p>
-                </div>
-
-                <div class="col">
-                      <h4>Switch 2</h4>
-                      <p class="message-status">ON</p>
-                </div>
-
-                <div class="col">
-                      <h4>Switch 3</h4>
-                      <p class="message-status">ON</p>
-                </div>
-
-                <div class="col">
-                      <h4>Switch 4</h4>
-                      <p class="message-status">ON</p>
-                </div>
-            </div>
-
-            <div class="line2"></div>
-
-             <div class="message-boxes">
-                <div class="col">
-                      <h4>Temperature</h4>
-                      <p class="message-status">ON</p>
-                </div>
-
-                <div class="col">
-                      <h4>Fan</h4>
-                      <p class="message-status">ON</p>
-                </div>
-
-                <div class="col">
-                      <h4>Last Number</h4>
-                      <p class="message-status">ON</p>
-                </div>
-            </div>
-            
-
-
-            
-        </div>
 
 
 
     </main>
 
 
-</div>
+    </div>
 {% endblock %}

@@ -14,7 +14,6 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
         // line 1
         $this->parent = $this->loadTemplate("layout.html.twig", "homepage.html.twig", 1);
         $this->blocks = array(
-            'title' => array($this, 'block_title'),
             'content' => array($this, 'block_content'),
         );
     }
@@ -30,15 +29,9 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
     }
 
     // line 2
-    public function block_title($context, array $blocks = array())
-    {
-        echo " Homepage ";
-    }
-
-    // line 3
     public function block_content($context, array $blocks = array())
     {
-        // line 4
+        // line 3
         echo "
     <div class=\"container\">
 
@@ -46,7 +39,7 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
         <div class=\"side-panel\">
 
             <div class=\"user-profile-container\">
-                <img class=\"my-profile-image\" src=\"media/head.png\" alt=\"your profile image\">
+                <h3 class=\"ee\">EE M2M</h3>
                 <div class=\"my-profile-name\">Mykolas Kaminskas</div>
             </div>
 
@@ -57,7 +50,7 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
 
             <div class=\"logout-container\">
                 <a class=\"logout\" href=\"";
-        // line 21
+        // line 20
         echo twig_escape_filter($this->env, ($context["logout"] ?? null), "html", null, true);
         echo "\">Log Out</a>
             </div>
@@ -66,151 +59,120 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
 
 
         <main>
-            
+
 
             <h1>Messages</h1>
 
             <div class=\"line\"></div>
 
-            <div class=\"message-box\">
+            ";
+        // line 33
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(($context["message_array"] ?? null));
+        foreach ($context['_seq'] as $context["_key"] => $context["messages"]) {
+            // line 34
+            echo "                <div class=\"message-box\">
 
-                <div class=\"profile-image-container\">
-                    <img class=\"profile-picture\" src=\"media/profile.png\" alt=\"profile picture\">
-                </div>
+                    <div class=\"date-time\">
 
-                <div class=\"message-content-container\">
+                        <h5 class=\"date\">";
+            // line 38
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getTime", array()), "html", null, true);
+            echo "</h5>
 
-                    <h2 class=\"sende-name\">Mykolas Kaminskas</h2>
+                    </div>
 
-                    <h3 class=\"sender-mobile\">+44 1238637452</h3>
-                    <h3 class=\"sender-email\">mykolaskam@example.com</h3>
+                    <div class=\"message-container\">
+                        <h2 class=\"message-name\">";
+            // line 43
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getId", array()), "html", null, true);
+            echo "</h2>
+                        <h3 class=\"message-phone-number\">";
+            // line 44
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getSource", array()), "html", null, true);
+            echo "</h3>
+                    </div>
 
                     <div class=\"line2\"></div>
 
-                    <p class=\"message\">Happy new year!!!</p>
+                    <div class=\"message-boxes\">
+                        <div class=\"col\">
+                            <h4>Switch 1</h4>
+                            <p class=\"message-status\">";
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getSwitch1", array()), "html", null, true);
+            echo "</p>
+                        </div>
 
-                </div>
+                        <div class=\"col\">
+                            <h4>Switch 2</h4>
+                            <p class=\"message-status\">";
+            // line 57
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getSwitch2", array()), "html", null, true);
+            echo "</p>
+                        </div>
 
-                <div class=\"date-time-container\">
+                        <div class=\"col\">
+                            <h4>Switch 3</h4>
+                            <p class=\"message-status\">";
+            // line 62
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getSwitch3", array()), "html", null, true);
+            echo "</p>
+                        </div>
 
-                    <h3 class=\"date-time\"> 23:59 31 Dec</h3>
-
-                </div>
-
-            </div>
-
-            <div class=\"message-box\">
-
-                <div class=\"profile-image-container\">
-                    <img class=\"profile-picture\" src=\"media/profile.png\" alt=\"profile picture\">
-                </div>
-
-                <div class=\"message-content-container\">
-
-                    <h2 class=\"sende-name\">Mykolas Kaminskas</h2>
-
-                    <h3 class=\"sender-mobile\">+44 1238637452</h3>
-                    <h3 class=\"sender-email\">mykolaskam@example.com</h3>
+                        <div class=\"col\">
+                            <h4>Switch 4</h4>
+                            <p class=\"message-status\">";
+            // line 67
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getSwitch4", array()), "html", null, true);
+            echo "</p>
+                        </div>
+                    </div>
 
                     <div class=\"line2\"></div>
 
-                    <p class=\"message\">Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio magnam sequi
-                        ullam aperiam est vitae expedita, corporis quaerat quam earum nam nobis nihil labore natus
-                        similique! Nam temporibus quasi eius.</p>
+                    <div class=\"message-boxes\">
+                        <div class=\"col\">
+                            <h4>Temperature</h4>
+                            <p class=\"message-status\">";
+            // line 76
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getTemp", array()), "html", null, true);
+            echo "</p>
+                        </div>
+
+                        <div class=\"col\">
+                            <h4>Fan</h4>
+                            <p class=\"message-status\">";
+            // line 81
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getFan", array()), "html", null, true);
+            echo "</p>
+                        </div>
+
+                        <div class=\"col\">
+                            <h4>Last Number</h4>
+                            <p class=\"message-status\">";
+            // line 86
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["messages"], "getKey", array()), "html", null, true);
+            echo "</p>
+                        </div>
+                    </div>
+
+
+
 
                 </div>
-
-                <div class=\"date-time-container\">
-
-                    <h3 class=\"date-time\"> 23:59 31 Dec</h3>
-
-                </div>
-
-            </div>
-
-            <div class=\"message-box\">
-
-                    <div class=\"profile-image-container\">
-                        <img class=\"profile-picture\" src=\"media/profile.png\" alt=\"profile picture\">
-                    </div>
-    
-                    <div class=\"message-content-container\">
-    
-                        <h2 class=\"sende-name\">Mykolas Kaminskas</h2>
-    
-                        <h3 class=\"sender-mobile\">+44 1238637452</h3>
-                        <h3 class=\"sender-email\">mykolaskam@example.com</h3>
-    
-                        <div class=\"line2\"></div>
-    
-                        <p class=\"message\">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class=\"date-time-container\">
-    
-                        <h3 class=\"date-time\"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
-
-            <div class=\"message-box\">
-
-                    <div class=\"profile-image-container\">
-                        <img class=\"profile-picture\" src=\"media/profile.png\" alt=\"profile picture\">
-                    </div>
-    
-                    <div class=\"message-content-container\">
-    
-                        <h2 class=\"sende-name\">Mykolas Kaminskas</h2>
-    
-                        <h3 class=\"sender-mobile\">+44 1238637452</h3>
-                        <h3 class=\"sender-email\">mykolaskam@example.com</h3>
-    
-                        <div class=\"line2\"></div>
-    
-                        <p class=\"message\">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class=\"date-time-container\">
-    
-                        <h3 class=\"date-time\"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
-
-            <div class=\"message-box\">
-
-                    <div class=\"profile-image-container\">
-                        <img class=\"profile-picture\" src=\"media/profile.png\" alt=\"profile picture\">
-                    </div>
-    
-                    <div class=\"message-content-container\">
-    
-                        <h2 class=\"sende-name\">Mykolas Kaminskas</h2>
-    
-                        <h3 class=\"sender-mobile\">+44 1238637452</h3>
-                        <h3 class=\"sender-email\">mykolaskam@example.com</h3>
-    
-                        <div class=\"line2\"></div>
-    
-                        <p class=\"message\">Happy new year!!!</p>
-    
-                    </div>
-    
-                    <div class=\"date-time-container\">
-    
-                        <h3 class=\"date-time\"> 23:59 31 Dec</h3>
-    
-                    </div>
-    
-            </div>
+            ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['messages'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 95
+        echo "
+    </div>
 
 
-        </main>
+
+    </main>
 
 
     </div>
@@ -229,7 +191,7 @@ class __TwigTemplate_7dbd949b06f91ad45c8a226f79adfcecaab00a7d838772fdf4c8e5c3c72
 
     public function getDebugInfo()
     {
-        return array (  61 => 21,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  170 => 95,  155 => 86,  147 => 81,  139 => 76,  127 => 67,  119 => 62,  111 => 57,  103 => 52,  92 => 44,  88 => 43,  80 => 38,  74 => 34,  70 => 33,  54 => 20,  35 => 3,  32 => 2,  15 => 1,);
     }
 
     public function getSourceContext()
