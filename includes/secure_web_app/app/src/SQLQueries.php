@@ -83,4 +83,29 @@ class SQLQueries
 		$m_query_string .= "AND session_var_name = :session_var_name";
 		return $m_query_string;
 	}
+
+	public static function get_messages()
+	{
+		$m_query_string  = "SELECT * ";
+		$m_query_string .= "FROM messages ";
+		return $m_query_string;
+	}
+
+	public static function create_message()
+	{
+		$m_query_string  = "REPLACE INTO messages ";
+		$m_query_string .= "SET source = :local_source, ";
+		$m_query_string .= "destination = :local_destination, ";
+		$m_query_string .= "time = :local_time, ";
+		$m_query_string .= "group_id = :local_group_id, ";
+		$m_query_string .= "switch_1 = :local_switch_1, ";
+		$m_query_string .= "switch_2 = :local_switch_2, ";
+		$m_query_string .= "switch_3 = :local_switch_3, ";
+		$m_query_string .= "switch_4 = :local_switch_4, ";
+		$m_query_string .= "fan = :local_fan, ";
+		$m_query_string .= "temperature = :local_temperature, ";
+		$m_query_string .= "last_key = :local_last_key ";
+		return $m_query_string;
+	}
+
 }

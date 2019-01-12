@@ -126,6 +126,45 @@ class SQLWrapper
     $this->safe_query($m_query_string, $m_arr_query_parameters);
   }
 
+
+  public function get_messages_var () {
+
+    $m_query_string = $this->c_obj_sql_queries->get_messages();
+  
+    $m_arr_query_parameters = [
+      
+    ];
+
+    $this->safe_query($m_query_string, $m_arr_query_parameters);
+
+    $message = $this->safe_fetch_array();
+    return $message;
+
+  }
+
+
+
+  public function create_message_var($p_source, $p_destination, $p_time, $p_id, $p_switch1, $p_switch2, $p_switch3, $p_switch4, $p_fan, $p_temperature, $p_key)
+  {
+    $m_query_string = $this->c_obj_sql_queries->create_message();
+
+    $m_arr_query_parameters = [
+      ':local_source' => $p_source,
+      ':local_destination' => $p_destination,
+      ':local_time' => $p_time,
+      ':local_group_id' => $p_id,
+      ':local_switch_1' => $p_switch1,
+      ':local_switch_2' => $p_switch2,
+      ':local_switch_3' => $p_switch3,
+      ':local_switch_4' => $p_switch4,
+      ':local_fan' => $p_fan,
+      ':local_temperature' => $p_temperature,
+      ':local_last_key' => $p_key
+    ];
+
+    $this->safe_query($m_query_string, $m_arr_query_parameters);
+  }
+
   public function create_user_var($p_username, $p_password, $p_name, $p_surname)
   {
     $m_query_string = $this->c_obj_sql_queries->create_new_user();
