@@ -4,9 +4,10 @@
     padding: 0;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    transition: 0.5s;
 }
 
-.container {
+.main-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -17,6 +18,12 @@
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+}
+
+.container {
+    width: 30%;
+    min-width: 300px;
+    margin: auto;
 }
 
 .side-panel {
@@ -99,8 +106,7 @@ main {
 
 h1 {
     font-size: 300%;
-    width: 70%;
-    margin: 50px auto;
+    margin: 50px 0;
     color: #007AFF;
     font-weight: 400;
 }
@@ -163,7 +169,7 @@ h3 {
 }
 
 .date, .time {
-    margin: 10px 15px;
+    margin: 20px 20px 0 20px;
     font-weight: 200;
 }
 
@@ -191,4 +197,106 @@ h3 {
     text-align: center;
     display: flex;
     flex-direction: column;
+}
+
+
+.top-bar {
+    width: 100%;
+    background-color: #F9F9F9;
+}
+
+.row {
+    display: inline-block;
+    width: 98%;
+    margin: auto;
+}
+
+.btn-blue {
+    font-size: 100%;
+    text-align: center;
+    margin: 25px;
+    color: white;
+    background-color: #007AFF;
+    border-radius: 10px;
+    padding: 15px 30px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: #007AFF;
+    text-align: center;
+    margin: auto;
+}
+
+button {
+    outline: none;
+    border: none;
+}
+
+h1 {
+    letter-spacing: 1px;
+    color: #007AFF;
+    text-align: center;
+    margin: 25px;
+    font-weight: 300;
+    font-size: 300%;
+}
+
+h2 {
+    border-bottom: 1px solid #ECECEC;
+    font-weight: 500;
+    margin: 20px 20px 25px 20px;
+    padding-bottom: 15px;
+}
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+}
+
+.input {
+    border-radius: 10px;
+    width: 96%;
+    margin: 3% 2%;
+    padding: 10px 10px 10px 30px;
+    font-size: 100%;
+    background-color: #ECECEC;
+}
+
+input {
+    border: none;
+}
+
+.text-wrapper {
+    margin: 20px;
+    position: relative;
+}
+
+.text-wrapper input+label {
+    opacity: 1;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
+    transition: 1s ease;
+}
+
+.text-wrapper .input:focus+label {
+    color: #007AFF;
+}
+
+.text-wrapper .input:focus {
+    outline-color: #007AFF;
+}
+
+.text-wrapper label {
+    position: absolute;
+    color: grey;
+    top: -8px;
+    left: 5px;
+    opacity: 0;
+    transition: 1s ease;
 }

@@ -40,7 +40,7 @@ class __TwigTemplate_ca76b862db2734c0fce84cdecf436835c3d50e4051c0e8d56a6591a3e8a
     {
         // line 4
         echo "
-<div class=\"container\">
+<div class=\"main-container\">
 
 
     <div class=\"side-panel\">
@@ -52,7 +52,10 @@ class __TwigTemplate_ca76b862db2734c0fce84cdecf436835c3d50e4051c0e8d56a6591a3e8a
 
         <div class=\"menu-options-container\">
             <a class=\"menu-option\" href=\"#\"><i class=\"far fa-comment-alt\"></i>Messages</a>
-            <a class=\"menu-option\" href=\"#\"><i class=\"fas fa-cog\"></i>Settings</a>
+            <a class=\"menu-option\" href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, ($context["register"] ?? null), "html", null, true);
+        echo "\"><i class=\"fas fa-user-plus\"></i>Add User</a>
         </div>
 
         <div class=\"logout-container\">
@@ -155,7 +158,7 @@ class __TwigTemplate_ca76b862db2734c0fce84cdecf436835c3d50e4051c0e8d56a6591a3e8a
 
     public function getDebugInfo()
     {
-        return array (  61 => 21,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
+        return array (  64 => 21,  57 => 17,  42 => 4,  39 => 3,  33 => 2,  15 => 1,);
     }
 
     public function getSourceContext()

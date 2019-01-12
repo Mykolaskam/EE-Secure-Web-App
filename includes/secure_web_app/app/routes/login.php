@@ -11,8 +11,6 @@ $app->get('/', function(Request $request, Response $response)
         [
             'css_path' => CSS_PATH,
             'action_login' => '/SecureWebApp/index.php/logincheck',
-            'action_register' => '/SecureWebApp/index.php/register',
-
         ]);
         
 })->setName('login');

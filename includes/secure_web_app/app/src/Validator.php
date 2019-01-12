@@ -20,23 +20,24 @@ class Validator
         return $m_sanitised_string;
     }
 
-
-
-    
-
-
-    public function sanitise_email($p_email_to_sanitise)
+    public function validate_username($p_string_to_sanitise)
     {
-        $m_sanitised_email = false;
+        $validated_name = $this->sanitise_string($p_string_to_sanitise);
 
-        if (!empty($p_email_to_sanitise))
+        if (strlen($validated_name) < 3 || strlen($validated_name) > 30)
         {
-            $m_sanitised_email = filter_var($p_email_to_sanitise, FILTER_SANITIZE_EMAIL);
+            $error_msg = "Username must be between 3 and 30 characters";
+        } 
+        elseif ($validated_name=='root' || $validated_name=='admin' || $validated_name=='user') 
+        {
+            $error_msg = "Invalid Username";
+        } 
+        else
+        {
+            return $validated_name;
         }
-
-        $m_sanitised_email = strip_tags($m_sanitised_email);
-        return $m_sanitised_email;
     }
+
 
 
     

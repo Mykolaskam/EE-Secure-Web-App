@@ -38,6 +38,14 @@ class SQLQueries
 	  return $m_query_string;
 	}
 
+	public static function check_username_exists()
+	{
+	  $m_query_string  = "SELECT username ";
+	  $m_query_string .= "FROM users ";
+	  $m_query_string .= "WHERE username = :local_username ";
+	  return $m_query_string;
+	}
+
 
   public static function check_session_var()
   {

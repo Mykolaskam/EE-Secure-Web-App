@@ -9,7 +9,10 @@ $app->get('/homepage', function(Request $request, Response $response)
         'homepage.html.twig',
         [
             'css_path' => CSS_PATH,
-            'logout' => '/SecureWebApp-master/SecureWebApp/public_php/SecureWebApp/index.php/login',
+            'logout' => '/SecureWebApp/index.php/login',
+            'register' => '/SecureWebApp/index.php/register',
+            'logout' => '/SecureWebApp/index.php/',
+
 
         ]);
 })->setName('homepage');
