@@ -91,7 +91,7 @@ $container['dbase'] = function ($container) {
     return $obj_pdo;
 };
 
-$container['msgmodel'] = function ($container){
+$container['soapmodel'] = function ($container){
     $class_path = $container ->get('settings')['class_path'];
     require $class_path . 'clientModel.php';
     $model = new clientModel();
@@ -105,4 +105,10 @@ $container['xmlmodel'] = function ($container){
     return $model;
 };
 
+$container['msgmodel'] = function ($container){
+    $class_path = $container ->get('settings')['class_path'];
+    require $class_path . 'messageModel.php';
+    $model = new messageModel();
+    return $model;
+};
 
