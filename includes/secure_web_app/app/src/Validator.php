@@ -12,18 +12,13 @@ class Validator
     {
     }
 
-    /**
-     *
-     */
-    public function __destruct()
-    {
-    }
+    public function __destruct() { }
 
-
-    /**
-     * @param $p_string_to_sanitise
-     * @return bool|mixed|string
-     */
+/**
+ * checks the string for data and santises it
+ * @param  $p_string_to_sanitise
+ * @return $m_sanitised_string
+ */
     public function sanitise_string($p_string_to_sanitise)
     {
         $m_sanitised_string = false;
@@ -35,11 +30,11 @@ class Validator
         $m_sanitised_string = strip_tags($m_sanitised_string);
         return $m_sanitised_string;
     }
-
-    /**
-     * @param $p_username_password_to_validate
-     * @return bool
-     */
+/**
+ * checking whether the string length fits the parameters
+ * @param $p_username_password_to_validate
+ * @return $valid
+ */
     public function validate_username_password($p_username_password_to_validate)
     {
         $valid = false;
@@ -52,12 +47,11 @@ class Validator
 
         return $valid;
     }
-
-
-    /**
-     * @param $p_value_to_check
-     * @return bool|mixed
-     */
+/**
+ * checks to see whether the entered string in an integer
+ * @param  $p_value_to_check
+ * @return $m_checked_value
+ */
     public function validate_integer($p_value_to_check)
     {
         $m_checked_value = false;
