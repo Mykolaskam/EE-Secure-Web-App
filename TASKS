@@ -4,8 +4,12 @@ Vinay
 
 SOAP WORK ------------- DONE
 BUILD ACTUAL SERVER AND CONNECTION ----------------DONE
-HOW TO LOG ALL WEB APP USAGE
-SEND MESSAGE BACK TO USER WITH RECIEPT OF AKNOWLEDGEMENT
+HOW TO LOG ALL WEB APP USAGE 
+PHP EXTENTIONS
+circuit board
+GET METADATA AND COMPARE IN TABLE TO PREVENT DUPLICATES
+XML to objects
+XDEBUG ------------------ DONE
 ------------------------------------------------------------
 Matthew
 
@@ -16,12 +20,9 @@ Documentation ie user guide
 ------------------------------------------------------------
 Mykolas
 
-LOGIN SYSTEM
-REGISTER SYSTEM
-SQL QUERIES AND WRAPPER METHODS
+LOGIN and ADMINISTRATOR PAGE 
 HTML TWIG
-SANITISATION AND VALIDATION
-ENCRYPTION
+SANITISATION 
 COMMENTS IN CODE
 ------------------------------------------------------------
 Everyone
@@ -31,9 +32,5 @@ ie encryption
 good code standard
 validated and optimised code
 PHP EXTENTIONS
-XDEBUG ------------------ DONE
-XML to JSON
-SMS Back to circuit board
-AJAX JSON
-GET METADATA AND COMPARE IN TABLE TO PREVENT DUPLICATES
+
 
