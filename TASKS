@@ -16,9 +16,12 @@ Documentation ie user guide
 ------------------------------------------------------------
 Mykolas
 
-LOGIN and ADMINISTRATOR PAGE 
+LOGIN SYSTEM
+REGISTER SYSTEM
+SQL QUERIES AND WRAPPER METHODS
 HTML TWIG
-SANITISATION 
+SANITISATION AND VALIDATION
+ENCRYPTION
 COMMENTS IN CODE
 ------------------------------------------------------------
 Everyone
