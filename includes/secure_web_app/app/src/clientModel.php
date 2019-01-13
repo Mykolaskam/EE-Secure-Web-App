@@ -17,7 +17,12 @@ class clientModel
 
     public function __destruct(){}
 
-    private function createSoapClient()
+    /**
+     * This function is hidden and creates the connection between the web service and the M2M server via SOAP
+     * it creates an object which has all the handles needed to make the soap request it then returns this object
+     * @return obj|$obj_soap_client_model
+     */
+    private function create_soap_client()
     {
         $obj_soap_client_handle = false;
         $wsdl = WSDL;
@@ -37,9 +42,16 @@ class clientModel
         return $obj_soap_client_handle;
     }
 
-    public function retrieveMessages()
+    /**
+     * Uses the private function create_soap_client in order to make a request to the M2M Server and gain all the messages
+     * in the server. It then checks the group number to identify the messages we have send and filters these messages into
+     * an array to be returned
+     * @return $m_arr_result
+     * returns a list of filtered messages as an array
+     */
+    public function retrieve_messages()
     {
-        $obj_soap_client_handle = $this->createSoapClient();
+        $obj_soap_client_handle = $this->create_soap_client();
         $result_array = [];
         try
         {
@@ -53,7 +65,7 @@ class clientModel
                 if(strpos($message,$this->groupnumber) !== false){
                     array_push($filtered_array,$message);
                 }
-                $result = $filtered_array;
+                $m_arr_result = $filtered_array;
             }
         }
         catch (SoapFault $obj_exception)
@@ -61,31 +73,49 @@ class clientModel
             trigger_error($obj_exception);
         }
 
-        return $result;
+        return $m_arr_result;
     }
 
 
-    public function setUsername($username)
+    /**
+     * Simple setter to set the username in the class
+     * @param $p_username
+     */
+    public function set_username($p_username)
     {
-        $this->username = $username;
+        $this->username = $p_username;
     }
 
 
-    public function setPassword($password)
+    /**
+     * Simple setter to set the password in the class
+     * @param $p_password
+     */
+    public function set_password($p_password)
     {
-        $this->password = $password;
+        $this->password = $p_password;
     }
 
-    public function setGroupNumber($groupnumber)
+    /**
+     * Simple setter to set the group number
+     * @param $p_groupnumber
+     */
+    public function set_group_number($p_groupnumber)
     {
-        $this->groupnumber = $groupnumber;
+        $this->groupnumber = $p_groupnumber;
     }
 
-    public function setAllParameters($username,$password,$groupnumber)
+    /**
+     * Takes in all three variables and stores them within the model to be used
+     * @param $p_username
+     * @param $p_password
+     * @param $p_groupnumber
+     */
+    public function set_all_parameters($p_username, $p_password, $p_groupnumber)
     {
-        $this->username = $username;
-        $this->password = $password;
-        $this->groupnumber = $groupnumber;
+        $this->username = $p_username;
+        $this->password = $p_password;
+        $this->groupnumber = $p_groupnumber;
 
 
     }
