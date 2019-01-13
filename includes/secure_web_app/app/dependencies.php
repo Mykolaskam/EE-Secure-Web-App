@@ -41,6 +41,20 @@ $container['bcrypt_wrapper'] = function ($container) {
     return $bcrypt_wrapper;
 };
 
+$container['libsodium_wrapper'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'LibSodiumWrapper.php';
+    $wrapper = new LibSodiumWrapper();
+    return $wrapper;
+};
+
+$container['base64_wrapper'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
+    require $class_path . 'Base64Wrapper.php';
+    $wrapper = new Base64Wrapper();
+    return $wrapper;
+};
+
 $container['user_model'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'UserModel.php';

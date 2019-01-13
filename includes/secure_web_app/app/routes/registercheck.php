@@ -8,6 +8,8 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
 
     $validator = $this->get('validator');
     $bcrypt = $this->get('bcrypt_wrapper');
+    $libsodium_wrapper = $this->get('libsodium_wrapper');
+    $base64_wrapper = $this->get('base64_wrapper');
     $wrapper_sql = $this->get('sql_wrapper');
     $db_handle = $this->get('dbase');
     $sql_queries = $this->get('sql_queries');
