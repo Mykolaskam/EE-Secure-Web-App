@@ -9,13 +9,32 @@
 class clientModel
 {
 
+    /**
+     * @var
+     */
     private $username;
+    /**
+     * @var
+     */
     private $password;
+    /**
+     * @var
+     */
     private $groupnumber;
 
-    public function __construct(){}
+    /**
+     * clientModel constructor.
+     */
+    public function __construct()
+    {
+    }
 
-    public function __destruct(){}
+    /**
+     *
+     */
+    public function __destruct()
+    {
+    }
 
     /**
      * This function is hidden and creates the connection between the web service and the M2M server via SOAP
@@ -28,14 +47,11 @@ class clientModel
         $wsdl = WSDL;
         $arr_soapclient = ['trace' => true, 'exceptions' => true];
 
-        try
-        {
+        try {
             $obj_soap_client_handle = new SoapClient($wsdl, $arr_soapclient);
 //           var_dump($obj_soap_client_handle->__getFunctions());
 //           var_dump($obj_soap_client_handle->__getTypes());
-        }
-        catch (SoapFault $obj_exception)
-        {
+        } catch (SoapFault $obj_exception) {
             trigger_error($obj_exception);
         }
 
@@ -53,23 +69,20 @@ class clientModel
     {
         $obj_soap_client_handle = $this->create_soap_client();
         $result_array = [];
-        try
-        {
-            $result_array = $obj_soap_client_handle->peekMessages($this->username,$this->password,"","");
+        try {
+            $result_array = $obj_soap_client_handle->peekMessages($this->username, $this->password, "", "");
 //      var_dump($obj_soap_client_handle->__getLastRequest());
 //      var_dump($obj_soap_client_handle->__getLastResponse());
 //      var_dump($obj_soap_client_handle->__getLastRequestHeaders());
 //      var_dump($obj_soap_client_handle->__getLastResponseHeaders());
             $filtered_array = [];
-            foreach($result_array as $message){
-                if(strpos($message,$this->groupnumber) !== false){
-                    array_push($filtered_array,$message);
+            foreach ($result_array as $message) {
+                if (strpos($message, $this->groupnumber) !== false) {
+                    array_push($filtered_array, $message);
                 }
                 $m_arr_result = $filtered_array;
             }
-        }
-        catch (SoapFault $obj_exception)
-        {
+        } catch (SoapFault $obj_exception) {
             trigger_error($obj_exception);
         }
 

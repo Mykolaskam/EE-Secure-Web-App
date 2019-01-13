@@ -1,6 +1,10 @@
 <?php
 
 // Register component on container
+/**
+ * @param $container
+ * @return \Slim\Views\Twig
+ */
 $container['view'] = function ($container) {
     $view = new \Slim\Views\Twig(
         $container['settings']['view']['template_path'],
@@ -13,6 +17,10 @@ $container['view'] = function ($container) {
     return $view;
 };
 
+/**
+ * @param $container
+ * @return Validator
+ */
 $container['validator'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'Validator.php';
@@ -20,6 +28,10 @@ $container['validator'] = function ($container) {
     return $validator;
 };
 
+/**
+ * @param $container
+ * @return SessionModel
+ */
 $container['session_model'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'SessionModel.php';
@@ -27,6 +39,10 @@ $container['session_model'] = function ($container) {
     return $session_model;
 };
 
+/**
+ * @param $container
+ * @return SessionWrapper
+ */
 $container['session_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'SessionWrapper.php';
@@ -34,6 +50,10 @@ $container['session_wrapper'] = function ($container) {
     return $session_wrapper;
 };
 
+/**
+ * @param $container
+ * @return BcryptWrapper
+ */
 $container['bcrypt_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'BcryptWrapper.php';
@@ -41,6 +61,10 @@ $container['bcrypt_wrapper'] = function ($container) {
     return $bcrypt_wrapper;
 };
 
+/**
+ * @param $container
+ * @return LibSodiumWrapper
+ */
 $container['libsodium_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'LibSodiumWrapper.php';
@@ -48,6 +72,10 @@ $container['libsodium_wrapper'] = function ($container) {
     return $wrapper;
 };
 
+/**
+ * @param $container
+ * @return Base64Wrapper
+ */
 $container['base64_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'Base64Wrapper.php';
@@ -55,6 +83,10 @@ $container['base64_wrapper'] = function ($container) {
     return $wrapper;
 };
 
+/**
+ * @param $container
+ * @return UserModel
+ */
 $container['user_model'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'UserModel.php';
@@ -62,6 +94,10 @@ $container['user_model'] = function ($container) {
     return $user_model;
 };
 
+/**
+ * @param $container
+ * @return SQLWrapper
+ */
 $container['sql_wrapper'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'SQLWrapper.php';
@@ -69,6 +105,10 @@ $container['sql_wrapper'] = function ($container) {
     return $mysql_wrapper;
 };
 
+/**
+ * @param $container
+ * @return SQLQueries
+ */
 $container['sql_queries'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'SQLQueries.php';
@@ -76,6 +116,10 @@ $container['sql_queries'] = function ($container) {
     return $sql_queries;
 };
 
+/**
+ * @param $container
+ * @return SQLModel
+ */
 $container['sql_model'] = function ($container) {
     $class_path = $container->get('settings')['class_path'];
     require $class_path . 'SQLModel.php';
@@ -83,6 +127,10 @@ $container['sql_model'] = function ($container) {
     return $sql_model;
 };
 
+/**
+ * @param $container
+ * @return null|PDO
+ */
 $container['dbase'] = function ($container) {
 
     $db_conf = $container['settings']['pdo'];
@@ -94,33 +142,42 @@ $container['dbase'] = function ($container) {
     $user_password = $db_conf['user_password'];
     $pdo_attributes = $db_conf['options'];
     $obj_pdo = null;
-    try
-    {
+    try {
         $obj_pdo = new PDO($host_details, $user_name, $user_password, $pdo_attributes);
-    }
-    catch (PDOException $exception_object)
-    {
+    } catch (PDOException $exception_object) {
         trigger_error('error connecting to  database');
     }
     return $obj_pdo;
 };
 
-$container['soapmodel'] = function ($container){
-    $class_path = $container ->get('settings')['class_path'];
+/**
+ * @param $container
+ * @return clientModel
+ */
+$container['soapmodel'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
     require $class_path . 'clientModel.php';
     $model = new clientModel();
     return $model;
 };
 
-$container['xmlmodel'] = function ($container){
-    $class_path = $container ->get('settings')['class_path'];
+/**
+ * @param $container
+ * @return XmlParser
+ */
+$container['xmlmodel'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
     require $class_path . 'XmlParser.php';
     $model = new XmlParser();
     return $model;
 };
 
-$container['msgmodel'] = function ($container){
-    $class_path = $container ->get('settings')['class_path'];
+/**
+ * @param $container
+ * @return messageModel
+ */
+$container['msgmodel'] = function ($container) {
+    $class_path = $container->get('settings')['class_path'];
     require $class_path . 'messageModel.php';
     $model = new messageModel();
     return $model;

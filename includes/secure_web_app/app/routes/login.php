@@ -3,8 +3,12 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app->get('/', function(Request $request, Response $response)
-{
+$app->get(/**
+ * @param Request $request
+ * @param Response $response
+ * @return mixed
+ */
+    '/', function (Request $request, Response $response) {
     $soap_model = $this->get('soapmodel');
     $session_wrapper = $this->get('session_wrapper');
     $wrapper_sql = $this->get('sql_wrapper');
@@ -24,16 +28,15 @@ $app->get('/', function(Request $request, Response $response)
 
         return $this->response->withRedirect('/SecureWebApp/index.php/homepage');
 
-    }
-    else {
+    } else {
 
-    return $this->view->render($response,
-        'login.html.twig',
-        [
-            'css_path' => CSS_PATH,
-            'action_login' => '/SecureWebApp/index.php/homepage',
-        ]);
+        return $this->view->render($response,
+            'login.html.twig',
+            [
+                'css_path' => CSS_PATH,
+                'action_login' => '/SecureWebApp/index.php/homepage',
+            ]);
 
     }
-        
+
 })->setName('login');

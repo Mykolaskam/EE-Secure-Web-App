@@ -68,6 +68,7 @@ class SQLQueries
     }
 
     /**
+     * Selects session_var_name from table session where session id matches local session id
      * @return string
      */
     public static function check_session_var()
@@ -80,6 +81,8 @@ class SQLQueries
     }
 
     /**
+     *
+     * inserts into table session session_id, session_var_name and session_var_value passed in sqlwrapper
      * @return string
      */
     public static function create_session_var()
@@ -92,6 +95,7 @@ class SQLQueries
     }
 
     /**
+     * function deletes a row from session table where session_id matches local session id passed in sqlwrapper
      * @return string
      */
     public static function delete_session_var()
@@ -102,6 +106,7 @@ class SQLQueries
     }
 
     /**
+     * updates a row in session table - sets session_value with session_var_value passed in sqlwrapper where session_id matches local session id and session_var_name matches session_var_name both parameters passed in sqlwrapper
      * @return string
      */
     public static function set_session_var()
@@ -114,6 +119,7 @@ class SQLQueries
     }
 
     /**
+     * gets session value from session table where session_id matches local_session_id and session_var_name matches session_var_name both values passed in sqlwrapper
      * @return string
      */
     public static function get_session_var()
@@ -126,6 +132,7 @@ class SQLQueries
     }
 
     /**
+     * Gets all rows from messages table and orders it by time in descending order
      * @return string
      */
     public static function get_messages()
@@ -138,6 +145,7 @@ class SQLQueries
     }
 
     /**
+     * This function inserts a new row into messages table with all parameters passed in sqlwrapper. REPLACE ensures that the same exact message is not inserted.
      * @return string
      */
     public static function create_message()

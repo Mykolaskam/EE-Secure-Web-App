@@ -62,7 +62,7 @@ class messageModel
     public function __construct()
     {
         $this->source = 'Not Set';
-        $this->destination ='Not Set';
+        $this->destination = 'Not Set';
         $this->time = 'Not Set';
         $this->id = 'Not Set';
         $this->switches[0] = 'Not Set';
@@ -72,6 +72,10 @@ class messageModel
         $this->temp = 'Not Set';
         $this->key = 'Not Set';
     }
+
+    /**
+     *
+     */
     public function __destruct()
     {
 
@@ -84,84 +88,72 @@ class messageModel
      */
     public function set_parameters($p_parsed_xml_array)
     {
-   
+
         if (isset($p_parsed_xml_array['TEMP'])) {
             $this->temp = $p_parsed_xml_array['TEMP'];
-        }
-        else{
+        } else {
             $this->temp = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['SOURCEMSISDN'])) {
             $this->source = $p_parsed_xml_array['SOURCEMSISDN'];
-        }
-        else{
+        } else {
             $this->source = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['DESTINATIONMSISDN'])) {
             $this->destination = $p_parsed_xml_array['DESTINATIONMSISDN'];
-        }
-        else{
+        } else {
             $this->destination = 'Not Set';
         }
 
 
         if (isset($p_parsed_xml_array['RECEIVEDTIME'])) {
             $this->time = $p_parsed_xml_array['RECEIVEDTIME'];
-        }
-        else{
+        } else {
             $this->time = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['ID'])) {
             $this->id = $p_parsed_xml_array['ID'];
-        }
-        else{
+        } else {
             $this->id = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['S1'])) {
             $this->switches[0] = $p_parsed_xml_array['S1'];
-        }
-        else{
+        } else {
             $this->switches[0] = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['S2'])) {
             $this->switches[1] = $p_parsed_xml_array['S2'];
-        }
-        else{
+        } else {
             $this->switches[1] = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['S3'])) {
             $this->switches[2] = $p_parsed_xml_array['S3'];
-        }
-        else{
+        } else {
             $this->switches[2] = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['S4'])) {
             $this->switches[3] = $p_parsed_xml_array['S4'];
-        }
-        else{
+        } else {
             $this->switches[3] = 'Not Set';
         }
 
         if (isset($p_parsed_xml_array['FAN'])) {
             $this->fan = $p_parsed_xml_array['FAN'];
-        }
-        else{
+        } else {
             $this->fan = 'Not Set';
         }
 
 
-
         if (isset($p_parsed_xml_array['KP'])) {
             $this->key = $p_parsed_xml_array['KP'];
-        }
-        else{
+        } else {
             $this->key = 'Not Set';
         }
     }
