@@ -56,7 +56,7 @@ class SQLQueries
     }
 
     /**
-     * Gets password of an existing user from users table with value :local_username passed in sqlwrapper
+     * Gets username of an existing user from users table with value :local_username passed in sqlwrapper
      * @return string
      */
     public static function get_username()
