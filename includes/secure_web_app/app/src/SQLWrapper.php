@@ -93,7 +93,7 @@ class SQLWrapper
 
   public function user_var_exists($p_username) {
 
-    $m_query_string = $this->c_obj_sql_queries->check_user_exists();
+    $m_query_string = $this->c_obj_sql_queries->get_password();
   
     $m_arr_query_parameters = [
       ':local_username' => $p_username
@@ -108,9 +108,7 @@ class SQLWrapper
 
   public function username_var_exists($p_username) {
 
-    $username_var_exists = false;
-
-    $m_query_string = $this->c_obj_sql_queries->check_username_exists();
+    $m_query_string = $this->c_obj_sql_queries->get_username();
   
     $m_arr_query_parameters = [
       ':local_username' => $p_username
@@ -119,12 +117,8 @@ class SQLWrapper
 
     $this->safe_query($m_query_string, $m_arr_query_parameters);
 
-    if ($this->count_rows() > 0)
-    {
-      $username_var_exists  = true;
-    }
-    return $username_var_exists;
-
+    $username = $this->safe_fetch_array()['username'];
+    return $username;
   }
 
 

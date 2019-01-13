@@ -11,8 +11,10 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
         $sql_queries = $this->get('sql_queries');
         $session_model = $this->get('session_model');
         $bcrypt = $this->get('bcrypt_wrapper');
+        $libsodium_wrapper = $this->get('libsodium_wrapper');
+        $base64_wrapper = $this->get('base64_wrapper');
         $validator = $this->get('validator');
-        
+
         $wrapper_sql->set_db_handle($db_handle);
         $wrapper_sql->set_sql_queries($sql_queries);
 
@@ -70,8 +72,10 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
         $sanitised_username = $validator->sanitise_string($username);
         $sanitised_password = $validator->sanitise_string($password);
 
+  
         $wrapper_sql->set_db_handle($db_handle);
         $wrapper_sql->set_sql_queries($sql_queries);
+
     
         if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
     
@@ -85,8 +89,17 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
             return $this->response->withRedirect('/SecureWebApp/index.php/homepage');
 
         } else {
+
+            return $this->view->render($response,
+            'login.html.twig',
+            [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string('Incorrect username or password'),
+            'action_register' => '/SecureWebApp/index.php/registercheck',
             
-            return $this->response->withRedirect('/SecureWebApp/index.php/');
+            ]);
+            
+       //  return $this->response->withRedirect('/SecureWebApp/index.php/');
     
         }
 

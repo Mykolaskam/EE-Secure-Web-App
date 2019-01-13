@@ -50,22 +50,22 @@ class __TwigTemplate_9a50f3eb065800c8dc7a3cdd649e2fad38e7ed85deb7e024f7d5ed70c0c
         <h2>Add New User</h2>
 
         <div class=\"text-wrapper\">
-            <input class=\"input\" type=\"text\" name=\"username\" />
+            <input class=\"input\" type=\"text\" name=\"username\" required/>
             <label>Username</label>
         </div>
 
         <div class=\"text-wrapper\">
-            <input class=\"input\" type=\"password\" name=\"password\" />
+            <input class=\"input\" type=\"password\" name=\"password\" required/>
             <label>Password</label>
         </div>
 
         <div class=\"text-wrapper\">
-            <input class=\"input\" type=\"text\" name=\"name\" />
+            <input class=\"input\" type=\"text\" name=\"name\" required/>
             <label>name</label>
         </div>
 
         <div class=\"text-wrapper\">
-            <input class=\"input\" type=\"text\" name=\"surname\" />
+            <input class=\"input\" type=\"text\" name=\"surname\" required/>
             <label>surname</label>
         </div>
 

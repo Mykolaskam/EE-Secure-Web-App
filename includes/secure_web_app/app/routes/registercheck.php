@@ -19,6 +19,7 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
     $wrapper_sql->set_sql_queries($sql_queries);
 
     
+
     if ($wrapper_sql->session_var_exists(session_id())) {
 
     $arr_tainted_params = $request->getParsedBody();
@@ -34,12 +35,15 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
     $validated_name = $validator->sanitise_string($name);
     $validated_surname = $validator->sanitise_string($surname);
 
-    //if ($validator->username_var_exists($validated_name)) {
-        
-    //}
+    
 
-   
-    $user_model->set_user_values($validated_username, $hashed_password, $validated_name, $validated_surname);
+    $encrypted_name = $libsodium_wrapper->encrypt($validated_name);
+    $encoded_name = $base64_wrapper->encode_base64($encrypted_name);
+
+    $encrypted_surname = $libsodium_wrapper->encrypt($validated_surname);
+    $encoded_surname = $base64_wrapper->encode_base64($encrypted_surname);
+
+    $user_model->set_user_values($validated_username, $hashed_password, $encoded_name, $encoded_surname);
     $user_model->set_wrapper_user_db($wrapper_sql);
     $user_model->set_db_handle($db_handle);
     $user_model->set_sql_queries($sql_queries);

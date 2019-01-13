@@ -30,7 +30,7 @@ class SQLQueries
 	}
 
 
-	public static function check_user_exists()
+	public static function get_password()
 	{
 	  $m_query_string  = "SELECT password ";
 	  $m_query_string .= "FROM users ";
@@ -38,7 +38,7 @@ class SQLQueries
 	  return $m_query_string;
 	}
 
-	public static function check_username_exists()
+	public static function get_username()
 	{
 	  $m_query_string  = "SELECT username ";
 	  $m_query_string .= "FROM users ";
