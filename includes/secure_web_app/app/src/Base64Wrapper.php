@@ -12,16 +12,32 @@
 
 class Base64Wrapper
 {
-    public function __construct(){}
+    /**
+     * Base64Wrapper constructor.
+     */
+    public function __construct()
+    {
+    }
 
-    public function __destruct(){}
+    /**
+     *
+     */
+    public function __destruct()
+    {
+    }
 
+    /**
+     *The function accepts a string as a parameter and encoded_string variable is set to false at the start of the function.
+     *if the string is not empty the function encodes the given string with data stored in variables nonce and encrypted_string.
+     *
+     * @param $string_to_encode
+     * @return bool|string
+     */
     public function encode_base64($string_to_encode)
     {
         $encoded_string = false;
 
-        if (!empty($string_to_encode['encrypted_string']))
-        {
+        if (!empty($string_to_encode['encrypted_string'])) {
             $nonce = $string_to_encode['nonce'];
             $encrypted_string = $string_to_encode['encrypted_string'];
             $encoded_string = base64_encode($nonce . $encrypted_string);
@@ -30,11 +46,14 @@ class Base64Wrapper
         return $encoded_string;
     }
 
+    /**
+     * @param $string_to_decode
+     * @return bool|string
+     */
     public function decode_base64($string_to_decode)
     {
         $decoded_string = false;
-        if (!empty($string_to_decode))
-        {
+        if (!empty($string_to_decode)) {
             $decoded_string = base64_decode($string_to_decode);
         }
         return $decoded_string;
