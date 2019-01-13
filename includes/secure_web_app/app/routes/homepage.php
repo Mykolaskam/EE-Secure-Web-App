@@ -24,8 +24,8 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
 
             $username = M2MUSER;
             $password = M2MPASS;
-            $soap_model->setAllParameters($username,$password,'18-3110-AN');
-            $data = $soap_model->retrieveMessages();
+            $soap_model->set_all_parameters($username,$password,'18-3110-AN');
+            $data = $soap_model->retrieve_messages();
             $message_array = [];
 
                 foreach($data as $item) {
