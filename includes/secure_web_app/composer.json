@@ -6,7 +6,11 @@
     }
   },
   "require": {
-    "ext-xml": "*"
+    "ext-xml": "*",
+    "ext-mbstring": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7"
   }
 
 }
