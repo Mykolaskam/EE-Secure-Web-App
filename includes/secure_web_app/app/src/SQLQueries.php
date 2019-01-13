@@ -52,7 +52,6 @@ class SQLQueries
     $m_query_string  = "SELECT session_var_name ";
     $m_query_string .= "FROM session ";
     $m_query_string .= "WHERE session_id = :local_session_id ";
-    $m_query_string .= "AND session_var_name = :session_var_name ";
     $m_query_string .= "LIMIT 1";
     return $m_query_string;
   }

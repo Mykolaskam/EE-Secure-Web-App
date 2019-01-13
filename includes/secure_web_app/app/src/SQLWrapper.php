@@ -57,14 +57,13 @@ class SQLWrapper
     return($this->c_arr_errors);
   }
 
-  private function session_var_exists($p_session_key)
+  public function session_var_exists()
   {
     $session_var_exists = false;
     $m_query_string = $this->c_obj_sql_queries->check_session_var();
 
     $m_arr_query_parameters = [
-      ':local_session_id' => session_id(),
-      ':session_var_name' => $p_session_key
+      ':local_session_id' => session_id()
     ];
 
     $this->safe_query($m_query_string, $m_arr_query_parameters);

@@ -3,13 +3,27 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app->post('/registercheck', function(Request $request, Response $response)
+$app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response $response)
 {
-    
-    $arr_tainted_params = $request->getParsedBody();
 
     $validator = $this->get('validator');
     $bcrypt = $this->get('bcrypt_wrapper');
+    $session_wrapper = $this->get('session_wrapper');
+    $wrapper_sql = $this->get('sql_wrapper');
+    $db_handle = $this->get('dbase');
+    $sql_queries = $this->get('sql_queries');
+    $session_model = $this->get('session_model');
+    $user_model = $this->get('user_model');
+
+    $wrapper_sql->set_db_handle($db_handle);
+    $wrapper_sql->set_sql_queries($sql_queries);
+
+    
+    if ($wrapper_sql->session_var_exists(session_id())) {
+
+    $arr_tainted_params = $request->getParsedBody();
+
+   
 
     $username = $arr_tainted_params['username'];
     $password = $arr_tainted_params['password'];
@@ -25,13 +39,7 @@ $app->post('/registercheck', function(Request $request, Response $response)
         
     //}
 
-    $session_wrapper = $this->get('session_wrapper');
-    $wrapper_sql = $this->get('sql_wrapper');
-    $db_handle = $this->get('dbase');
-    $sql_queries = $this->get('sql_queries');
-    $session_model = $this->get('session_model');
-    $user_model = $this->get('user_model');
-
+   
     $user_model->set_user_values($validated_username, $hashed_password, $validated_name, $validated_surname);
     $user_model->set_wrapper_user_db($wrapper_sql);
     $user_model->set_db_handle($db_handle);
@@ -47,4 +55,12 @@ $app->post('/registercheck', function(Request $request, Response $response)
             'error_message' => $validator->sanitise_string('New user created succesfully'),
             
         ]);
+
+    } else {
+
+        return $this->response->withRedirect('/SecureWebApp/index.php/');
+
+    }
+
+
 })->setName('registercheck');

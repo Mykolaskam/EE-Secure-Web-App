@@ -17,7 +17,6 @@
 class SessionModel
 {
   private $c_username;
-  private $c_password;
   private $c_arr_storage_result;
   private $c_obj_wrapper_session_db;
   private $c_obj_db_handle;
@@ -26,7 +25,6 @@ class SessionModel
   public function __construct()
   {
     $this->c_username = null;
-    $this->c_password = null;
     $this->c_arr_storage_result = null;
     $this->c_obj_wrapper_session_db = null;
     $this->c_obj_db_handle = null;
@@ -35,10 +33,9 @@ class SessionModel
 
   public function __destruct() { }
 
-  public function set_session_values($p_username, $p_password)
+  public function set_session_values($p_username)
   {
     $this->c_username = $p_username;
-    $this->c_password = $p_password;
   }
 
 
@@ -75,7 +72,6 @@ class SessionModel
     $this->c_obj_wrapper_session_db->set_sql_queries( $this->c_obj_sql_queries);
 
     $m_store_result = $this->c_obj_wrapper_session_db->store_session_var('user_name', $this->c_username);
-    $m_store_result = $this->c_obj_wrapper_session_db->store_session_var('user_password', $this->c_password);
 
     return $m_store_result;
   }
