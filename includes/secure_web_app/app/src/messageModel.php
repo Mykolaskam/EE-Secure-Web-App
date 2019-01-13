@@ -213,7 +213,7 @@ class messageModel
 
     /**
      * @return string
-     * gets the information of switch 3 from thh model
+     * gets the information of switch 3 from the model
      */
     public function getSwitch3()
     {
@@ -222,6 +222,7 @@ class messageModel
 
     /**
      * @return mixed
+     * gets the information of switch 4 from the model
      */
     public function getSwitch4()
     {
@@ -230,6 +231,7 @@ class messageModel
 
     /**
      * @return mixed
+     * gets the information of the fan from the model
      */
     public function getFan()
     {
@@ -238,6 +240,7 @@ class messageModel
 
     /**
      * @return string
+     * gets the temperature information from the model
      */
     public function getTemp()
     {
@@ -246,6 +249,7 @@ class messageModel
 
     /**
      * @return string
+     * gets the key from the model
      */
     public function getKey()
     {

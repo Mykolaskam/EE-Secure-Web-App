@@ -57,6 +57,7 @@ class SessionModel
     }
 
     /**
+     * Simple setter to set the username in the class as a session value
      * @param $p_username
      */
     public function set_session_values($p_username)

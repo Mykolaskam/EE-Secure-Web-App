@@ -32,7 +32,7 @@ class LibSodiumWrapper
     }
 
     /**
-     *
+     *function sets the key for encryption and checks key size compared to SODIUM_CRYPTO_SECRETBOX_KEYBYTES, if not equal range exception is thrown .
      */
     private function initialise_encryption()
     {
@@ -72,7 +72,7 @@ class LibSodiumWrapper
     /**
      * This function accepts a base 64 wrapper and a string that needs to be decrypted.
      * the string is decoded with decode_base64 and if it returns false - exception will be thrown.
-     * then a check is made if the message was truncated - if not the mesage is decrypted using sodium_crypto_secretbox_open
+     * then a check is made if the message was truncated - if not the message is decrypted using sodium_crypto_secretbox_open
      * @param $base64_wrapper
      * @param $string_to_decrypt
      * @return bool|string

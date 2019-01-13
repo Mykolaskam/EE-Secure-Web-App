@@ -31,6 +31,8 @@ class SessionWrapper
     {
     }
 
+    
+
     /**
      * @param $p_session_key
      * @param $p_session_value_to_set

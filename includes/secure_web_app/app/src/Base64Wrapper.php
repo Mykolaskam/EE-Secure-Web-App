@@ -47,6 +47,8 @@ class Base64Wrapper
     }
 
     /**
+     * The function accepts passed parameter as a string. variable decoded_string is set to false in the beginning of the function.
+     * if the passed string is not empty - decoded_string is set to passed string which is basee64 decoded using "base64_decode" method, then decoded_string is returned.
      * @param $string_to_decode
      * @return bool|string
      */

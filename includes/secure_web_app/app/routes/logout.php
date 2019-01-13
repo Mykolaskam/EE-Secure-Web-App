@@ -3,9 +3,13 @@
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
 
-$app->get('/logout', function(Request $request, Response $response)
-{
-    
+$app->get(/**
+ * @param Request $request
+ * @param Response $response
+ * @return mixed
+ */
+    '/logout', function (Request $request, Response $response) {
+
     $wrapper_sql = $this->get('sql_wrapper');
     $db_handle = $this->get('dbase');
     $sql_queries = $this->get('sql_queries');
@@ -21,7 +25,6 @@ $app->get('/logout', function(Request $request, Response $response)
     $wrapper_sql->destroy_session(session_id());
 
     return $this->response->withRedirect('/SecureWebApp/index.php/');
-  
 
-        
+
 })->setName('logout');
