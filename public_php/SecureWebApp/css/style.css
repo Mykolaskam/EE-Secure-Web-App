@@ -161,6 +161,10 @@ h3 {
     margin:0 2% 0 2%;
 }
 
+.ee {
+    margin-bottom: 30px;
+}
+
 .date-time {
     width: 100%;
     display: flex;

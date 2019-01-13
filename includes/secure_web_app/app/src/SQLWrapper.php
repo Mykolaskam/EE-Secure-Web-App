@@ -59,6 +59,7 @@ class SQLWrapper
     }
 
     /**
+     * SQL queries are passed through using the SQLqueries.php
      * @param $p_obj_sql_queries
      */
     public function set_sql_queries($p_obj_sql_queries)
@@ -85,6 +86,7 @@ class SQLWrapper
     }
 
     /**
+     * checks if session exists on the database using an sql query with given session_id(). The query is executed using safe_query with passed query string and passed parameters. if more than 0 rows is returned - method will return true.
      * @return bool
      */
     public function session_var_exists()
@@ -105,7 +107,7 @@ class SQLWrapper
     }
 
     /**
-     *
+     *Session is deleted from the database using an sql query with given session_id(). The query is executed using safe_query with passed query string and passed parameters. and at the end local session is destroyed using session_destroy()
      */
     public function destroy_session()
     {
@@ -122,6 +124,8 @@ class SQLWrapper
     }
 
     /**
+     * function accepts a sting parameter username. Function returns a password from the database using an sql query with given parameter username. The query is executed using safe_query with passed query string and passed parameters.
+     * the method fetches an array stored in password variable that contains the password of the given username.
      * @param $p_username
      * @return mixed
      */
@@ -142,6 +146,7 @@ class SQLWrapper
     }
 
     /**
+     *function checks if the username already exists on the database. The query is executed using safe_query with passed query string and passed parameters. if more than 0 rows is returned - method will return true.
      * @param $p_username
      * @return bool
      */
@@ -167,6 +172,7 @@ class SQLWrapper
 
 
     /**
+     * function creates a new record in the databaes of a session recorded. function accepts session key and session value to be passed as parameters for safe_query.The query is executed using safe_query with passed query string and passed parameters.
      * @param $p_session_key
      * @param $p_session_value
      */
@@ -185,6 +191,7 @@ class SQLWrapper
 
 
     /**
+     * 
      * @return mixed
      */
     public function get_messages_var()

@@ -37,19 +37,19 @@ $app->map(/**
             $xml_model->__construct();
             $xml_model->set_xml_string_to_parse($item);
             $xml_model->parse_the_xml_string();
-            $msgmodel->setParameters($xml_model->get_parsed_data());
+            $msgmodel->set_parameters($xml_model->get_parsed_data());
 
-            $source = $validator->sanitise_string($msgmodel->getSource());
-            $destination = $validator->sanitise_string($msgmodel->getDestination());
-            $time = $validator->sanitise_string($msgmodel->getTime());
-            $id = $validator->sanitise_string($msgmodel->getId());
-            $switch1 = $validator->sanitise_string($msgmodel->getSwitch1());
-            $switch2 = $validator->sanitise_string($msgmodel->getSwitch2());
-            $switch3 = $validator->sanitise_string($msgmodel->getSwitch3());
-            $switch4 = $validator->sanitise_string($msgmodel->getSwitch4());
-            $fan = $validator->sanitise_string($msgmodel->getFan());
-            $temperature = $validator->sanitise_string($msgmodel->getTemp());
-            $key = $validator->sanitise_string($msgmodel->getKey());
+            $source = $validator->sanitise_string($msgmodel->get_source());
+            $destination = $validator->sanitise_string($msgmodel->get_destination());
+            $time = $validator->sanitise_string($msgmodel->get_time());
+            $id = $validator->sanitise_string($msgmodel->get_id());
+            $switch1 = $validator->sanitise_string($msgmodel->get_switch1());
+            $switch2 = $validator->sanitise_string($msgmodel->get_switch2());
+            $switch3 = $validator->sanitise_string($msgmodel->get_switch3());
+            $switch4 = $validator->sanitise_string($msgmodel->get_switch4());
+            $fan = $validator->sanitise_string($msgmodel->get_fan());
+            $temperature = $validator->sanitise_string($msgmodel->get_temp());
+            $key = $validator->sanitise_string($msgmodel->get_key());
 
             $wrapper_sql->create_message_var($source, $destination, $time, $id, $switch1, $switch2, $switch3, $switch4, $fan, $temperature, $key);
             $message_array = $wrapper_sql->get_messages_var();

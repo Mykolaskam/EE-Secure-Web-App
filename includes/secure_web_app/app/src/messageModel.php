@@ -162,7 +162,7 @@ class messageModel
      * @return string
      * gets the source from the model
      */
-    public function getSource()
+    public function get_source()
     {
         return $this->source;
     }
@@ -172,7 +172,7 @@ class messageModel
      * @return string
      * gets the destination variable from the model
      */
-    public function getDestination()
+    public function get_destination()
     {
         return $this->destination;
     }
@@ -180,7 +180,7 @@ class messageModel
     /**
      * @return gets the time of the message from the model
      */
-    public function getTime()
+    public function get_time()
     {
         return $this->time;
     }
@@ -188,7 +188,7 @@ class messageModel
     /**
      * @return gets the group id from the model
      */
-    public function getId()
+    public function get_id()
     {
         return $this->id;
     }
@@ -197,7 +197,7 @@ class messageModel
      * @return string
      * gets the information of switch 1 from the model
      */
-    public function getSwitch1()
+    public function get_switch1()
     {
         return $this->switches[0];
     }
@@ -206,7 +206,7 @@ class messageModel
      * @return string
      * gets the information of switch 2 from the model
      */
-    public function getSwitch2()
+    public function get_switch2()
     {
         return $this->switches[1];
     }
@@ -215,7 +215,7 @@ class messageModel
      * @return string
      * gets the information of switch 3 from the model
      */
-    public function getSwitch3()
+    public function get_switch3()
     {
         return $this->switches[2];
     }
@@ -224,7 +224,7 @@ class messageModel
      * @return mixed
      * gets the information of switch 4 from the model
      */
-    public function getSwitch4()
+    public function get_switch4()
     {
         return $this->switches[3];
     }
@@ -233,7 +233,7 @@ class messageModel
      * @return mixed
      * gets the information of the fan from the model
      */
-    public function getFan()
+    public function get_fan()
     {
         return $this->fan;
     }
@@ -242,7 +242,7 @@ class messageModel
      * @return string
      * gets the temperature information from the model
      */
-    public function getTemp()
+    public function get_temp()
     {
         return $this->temp;
     }
@@ -251,7 +251,7 @@ class messageModel
      * @return string
      * gets the key from the model
      */
-    public function getKey()
+    public function get_key()
     {
         return $this->key;
     }

@@ -41,17 +41,6 @@ $container['session_model'] = function ($container) {
 
 /**
  * @param $container
- * @return SessionWrapper
- */
-$container['session_wrapper'] = function ($container) {
-    $class_path = $container->get('settings')['class_path'];
-    require $class_path . 'SessionWrapper.php';
-    $session_wrapper = new SessionWrapper();
-    return $session_wrapper;
-};
-
-/**
- * @param $container
  * @return BcryptWrapper
  */
 $container['bcrypt_wrapper'] = function ($container) {

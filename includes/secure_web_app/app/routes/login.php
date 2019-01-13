@@ -10,7 +10,6 @@ $app->get(/**
  */
     '/', function (Request $request, Response $response) {
     $soap_model = $this->get('soapmodel');
-    $session_wrapper = $this->get('session_wrapper');
     $wrapper_sql = $this->get('sql_wrapper');
     $db_handle = $this->get('dbase');
     $sql_queries = $this->get('sql_queries');
