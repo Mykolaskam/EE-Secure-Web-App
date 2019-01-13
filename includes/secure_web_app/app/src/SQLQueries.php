@@ -65,6 +65,13 @@ class SQLQueries
 		return $m_query_string;
 	}
 
+	public static function delete_session_var()
+	{
+		$m_query_string  = "DELETE FROM session ";
+		$m_query_string .= "WHERE session_id = :local_session_id ";
+		return $m_query_string;
+	}
+
 	public static function set_session_var()
 	{
 		$m_query_string  = "UPDATE session ";

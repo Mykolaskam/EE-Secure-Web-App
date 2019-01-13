@@ -6,13 +6,13 @@ use \Psr\Http\Message\ResponseInterface as Response;
 $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $response) use ($app){
 
         $soap_model = $this->get('soapmodel');
-        $session_wrapper = $this->get('session_wrapper');
         $wrapper_sql = $this->get('sql_wrapper');
         $db_handle = $this->get('dbase');
         $sql_queries = $this->get('sql_queries');
         $session_model = $this->get('session_model');
         $bcrypt = $this->get('bcrypt_wrapper');
         $validator = $this->get('validator');
+        
         $wrapper_sql->set_db_handle($db_handle);
         $wrapper_sql->set_sql_queries($sql_queries);
 
@@ -54,7 +54,7 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
             'homepage.html.twig',
             [
                 'css_path' => CSS_PATH,
-                'logout' => '/SecureWebApp/index.php/',
+                'logout' => '/SecureWebApp/index.php/logout',
                 'message_array' => $message_array,
                 'register' =>'/SecureWebApp/index.php/register',
 

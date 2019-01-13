@@ -8,11 +8,9 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
 
     $validator = $this->get('validator');
     $bcrypt = $this->get('bcrypt_wrapper');
-    $session_wrapper = $this->get('session_wrapper');
     $wrapper_sql = $this->get('sql_wrapper');
     $db_handle = $this->get('dbase');
     $sql_queries = $this->get('sql_queries');
-    $session_model = $this->get('session_model');
     $user_model = $this->get('user_model');
 
     $wrapper_sql->set_db_handle($db_handle);
@@ -23,7 +21,6 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
 
     $arr_tainted_params = $request->getParsedBody();
 
-   
 
     $username = $arr_tainted_params['username'];
     $password = $arr_tainted_params['password'];

@@ -75,6 +75,22 @@ class SQLWrapper
     return $session_var_exists;
   }
 
+  public function destroy_session()
+  {
+
+    
+    $m_query_string = $this->c_obj_sql_queries->delete_session_var();
+
+    $m_arr_query_parameters = [
+      ':local_session_id' => session_id()
+    ];
+
+    $this->safe_query($m_query_string, $m_arr_query_parameters);
+
+    session_destroy();
+
+  }
+
   public function user_var_exists($p_username) {
 
     $m_query_string = $this->c_obj_sql_queries->check_user_exists();
