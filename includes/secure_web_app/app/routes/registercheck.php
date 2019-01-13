@@ -35,6 +35,38 @@ $app->map(['GET', 'POST'], '/registercheck', function(Request $request, Response
     $validated_name = $validator->sanitise_string($name);
     $validated_surname = $validator->sanitise_string($surname);
 
+    if (empty($validated_username) || empty($hashed_password) || empty($validated_name) || empty($validated_surname)) {
+        return $this->view->render($response,
+        'register.html.twig',
+        [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string('All fields must be filled'),
+            
+        ]);
+    }
+
+    if ($validator->validate_username_password($validated_username) && $validator->validate_username_password($validator->sanitise_string($password))) {
+        if ($wrapper_sql->username_var_exists($validated_username)) {
+        return $this->view->render($response,
+        'register.html.twig',
+        [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string($validated_username .' username is taken'),
+            
+        ]);
+        }
+    } else {
+
+        return $this->view->render($response,
+        'register.html.twig',
+        [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string('Username and password must be between 3 and 30 characters'),
+            
+        ]);
+
+    }
+
     
 
     $encrypted_name = $libsodium_wrapper->encrypt($validated_name);

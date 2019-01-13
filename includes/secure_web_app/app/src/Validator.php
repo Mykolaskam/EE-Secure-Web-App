@@ -20,22 +20,18 @@ class Validator
         return $m_sanitised_string;
     }
 
-    public function validate_username($p_string_to_sanitise)
+    public function validate_username_password($p_username_password_to_validate)
     {
-        $validated_name = $this->sanitise_string($p_string_to_sanitise);
+        $valid = false;
 
-        if (strlen($validated_name) < 3 || strlen($validated_name) > 30)
+        if (strlen($p_username_password_to_validate) < 3 || strlen($p_username_password_to_validate) > 30)
         {
-            $error_msg = "Username must be between 3 and 30 characters";
-        } 
-        elseif ($validated_name=='root' || $validated_name=='admin' || $validated_name=='user') 
-        {
-            $error_msg = "Invalid Username";
-        } 
-        else
-        {
-            return $validated_name;
+            $valid = false;
+        } else {
+            $valid = true;
         }
+
+        return $valid;
     }
 
 

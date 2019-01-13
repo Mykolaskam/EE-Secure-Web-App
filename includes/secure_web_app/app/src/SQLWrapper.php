@@ -77,8 +77,6 @@ class SQLWrapper
 
   public function destroy_session()
   {
-
-    
     $m_query_string = $this->c_obj_sql_queries->delete_session_var();
 
     $m_arr_query_parameters = [
@@ -108,6 +106,8 @@ class SQLWrapper
 
   public function username_var_exists($p_username) {
 
+    $username_var_exists = false;
+
     $m_query_string = $this->c_obj_sql_queries->get_username();
   
     $m_arr_query_parameters = [
@@ -117,8 +117,11 @@ class SQLWrapper
 
     $this->safe_query($m_query_string, $m_arr_query_parameters);
 
-    $username = $this->safe_fetch_array()['username'];
-    return $username;
+    if ($this->count_rows() > 0)
+    {
+      $username_var_exists  = true;
+    }
+    return  $username_var_exists;
   }
 
 

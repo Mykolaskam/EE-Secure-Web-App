@@ -76,6 +76,19 @@ $app->map(['GET', 'POST'], '/homepage', function (Request $request, Response $re
         $wrapper_sql->set_db_handle($db_handle);
         $wrapper_sql->set_sql_queries($sql_queries);
 
+        if (empty($sanitised_username) || empty($sanitised_password)) {
+            
+            return $this->view->render($response,
+            'login.html.twig',
+            [
+            'css_path' => CSS_PATH,
+            'error_message' => $validator->sanitise_string('Username or password cannot be empty'),
+            'action_register' => '/SecureWebApp/index.php/registercheck',
+            
+            ]);
+        }
+
+
     
         if ($bcrypt->authenticate_password($sanitised_password, $wrapper_sql->user_var_exists($sanitised_username))) {
     
