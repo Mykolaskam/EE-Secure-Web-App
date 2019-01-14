@@ -327,16 +327,6 @@ class SQLWrapper
     }
 
     /**
-     * function returns a row 
-     * @return mixed
-     */
-    public function safe_fetch_row()
-    {
-        $m_record_set = $this->c_obj_stmt->fetch(PDO::FETCH_NUM);
-        return $m_record_set;
-    }
-
-    /**
      * @return mixed
      */
     public function safe_fetch_array()
@@ -356,17 +346,4 @@ class SQLWrapper
         return $m_arr_row;
     }
 
-
-    /**
-     * @return mixed
-     */
-    public function last_inserted_ID()
-    {
-        $m_sql_query = 'SELECT LAST_INSERT_ID()';
-
-        $this->safe_query($m_sql_query);
-        $m_arr_last_inserted_id = $this->safe_fetch_array();
-        $m_last_inserted_id = $m_arr_last_inserted_id['LAST_INSERT_ID()'];
-        return $m_last_inserted_id;
-    }
 }
