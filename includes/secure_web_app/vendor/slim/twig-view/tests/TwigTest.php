@@ -59,9 +59,9 @@ class TwigTest extends \PHPUnit_Framework_TestCase
         $view = new Twig(
             [
                 'namespace' => [
-                    __DIR__ . '/another',
-                    __DIR__ . '/templates',
-                    __DIR__ . '/multi',
+                    __DIR__.'/another',
+                    __DIR__.'/templates',
+                    __DIR__.'/multi',
                 ],
             ]
         );
@@ -88,7 +88,7 @@ class TwigTest extends \PHPUnit_Framework_TestCase
     {
         $views = new Twig([
             'One' => [
-                __DIR__ . '/templates',
+                __DIR__.'/templates',
             ],
         ]);
 
@@ -102,7 +102,7 @@ class TwigTest extends \PHPUnit_Framework_TestCase
     public function testASingleTemplateWithANamespace()
     {
         $views = new Twig([
-            'One' => __DIR__ . '/templates',
+            'One' => __DIR__.'/templates',
         ]);
 
         $output = $views->fetch('@One/example.html', [
@@ -117,10 +117,10 @@ class TwigTest extends \PHPUnit_Framework_TestCase
         $weekday = (new \DateTimeImmutable('2016-03-08'))->format('l');
 
         $views = new Twig([
-            'One'   => __DIR__ . '/templates',
-            'Two'   => __DIR__ . '/another',
+            'One'   => __DIR__.'/templates',
+            'Two'   => __DIR__.'/another',
             'Three' => [
-                __DIR__ . '/multi',
+                __DIR__.'/multi',
             ],
         ]);
 
@@ -145,7 +145,7 @@ class TwigTest extends \PHPUnit_Framework_TestCase
     public function testMultipleDirectoriesWithoutNamespaces()
     {
         $weekday = (new \DateTimeImmutable('2016-03-08'))->format('l');
-        $view    = new Twig([__DIR__ . '/multi/', __DIR__ . '/another/']);
+        $view    = new Twig([__DIR__.'/multi/', __DIR__.'/another/']);
 
         $rootDirectory = $view->fetch('directory/template/example.html', [
             'weekday' => $weekday,
