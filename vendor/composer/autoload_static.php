@@ -7,9 +7,9 @@ namespace Composer\Autoload;
 class ComposerStaticInitd7606cf9d7560a880579d7e3a396fad0
 {
     public static $files = array (
-        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/..' . '/nikic/fast-route/src/functions.php',
-        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/..' . '/symfony/polyfill-ctype/bootstrap.php',
-        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
+        '253c157292f75eb38082b5acb06f3f01' => __DIR__ . '/vendor',
+        '320cde22f66dd4f5d3fd621d3e88b98f' => __DIR__ . '/vendor',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/vendor',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -47,47 +47,47 @@ class ComposerStaticInitd7606cf9d7560a880579d7e3a396fad0
     public static $prefixDirsPsr4 = array (
         'Twig\\' => 
         array (
-            0 => __DIR__ . '/..' . '/twig/twig/src',
+            0 => __DIR__ . '/vendor',
         ),
         'Symfony\\Polyfill\\Mbstring\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+            0 => __DIR__ . '/vendor',
         ),
         'Symfony\\Polyfill\\Ctype\\' => 
         array (
-            0 => __DIR__ . '/..' . '/symfony/polyfill-ctype',
+            0 => __DIR__ . '/vendor',
         ),
         'Slim\\Views\\' => 
         array (
-            0 => __DIR__ . '/..' . '/slim/twig-view/src',
+            0 => __DIR__ . '/vendor',
         ),
         'Slim\\' => 
         array (
-            0 => __DIR__ . '/..' . '/slim/slim/Slim',
+            0 => __DIR__ . '/vendor',
         ),
         'Psr\\Log\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+            0 => __DIR__ . '/vendor',
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/vendor',
         ),
         'Psr\\Container\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/container/src',
+            0 => __DIR__ . '/vendor',
         ),
         'Monolog\\' => 
         array (
-            0 => __DIR__ . '/..' . '/monolog/monolog/src/Monolog',
+            0 => __DIR__ . '/vendor',
         ),
         'Interop\\Container\\' => 
         array (
-            0 => __DIR__ . '/..' . '/container-interop/container-interop/src/Interop/Container',
+            0 => __DIR__ . '/vendor',
         ),
         'FastRoute\\' => 
         array (
-            0 => __DIR__ . '/..' . '/nikic/fast-route/src',
+            0 => __DIR__ . '/vendor',
         ),
     );
 
@@ -96,14 +96,14 @@ class ComposerStaticInitd7606cf9d7560a880579d7e3a396fad0
         array (
             'Twig_' => 
             array (
-                0 => __DIR__ . '/..' . '/twig/twig/lib',
+                0 => __DIR__ . '/vendor',
             ),
         ),
         'P' => 
         array (
             'Pimple' => 
             array (
-                0 => __DIR__ . '/..' . '/pimple/pimple/src',
+                0 => __DIR__ . '/vendor',
             ),
         ),
     );
