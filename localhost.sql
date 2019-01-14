@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jan 13, 2019 at 07:47 PM
+-- Generation Time: Jan 14, 2019 at 12:50 AM
 -- Server version: 5.7.23
 -- PHP Version: 7.2.10
 
@@ -69,7 +69,7 @@ CREATE TABLE `session` (
 --
 
 INSERT INTO `session` (`session_id`, `session_var_name`, `session_value`) VALUES
-('gm58n8je4jpmkth8r662g3lq46', 'user_name', 'mk');
+('gm58n8je4jpmkth8r662g3lq46', 'user_name', 'root');
 
 -- --------------------------------------------------------
 
@@ -90,7 +90,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `name`, `surname`) VALUES
-(69, 'admin', '$2y$12$u9z76q05mF6yzjwnIN1HteGgwY8okJb2pg0nPz4D3lv8X1dZHxrCq', '', '');
+(100, 'root', '$2y$12$vKhQG.XWGuk8BYnqkNjW8.1jDQ.hxn1..V0LRcFcRZKHyBCwCshNK', 'ZOhFDAT5aFxf1p7XIuPBwn/M0qasRG3YExOn49L+SycEaLCCR61/QmjjeQ8=', 'qWqTSFZ8v8y9PkDVJI5KXKt+Y4TAu/sHGNvXEnWzjW6DdqjXmrRMYn1QkTE='),
+(101, 'admin', '$2y$12$WzdLs49as/MBcVSq/NeQVeAoV3s3VRpwkeBfvSIV8WIp3STUFfNWC', 'JRYfyu87LS0wQ6g1dSegJkS1tVBJjagzmVjDdlbt8Cx9auw0HBhLl4eR0f8k', 'rtbuSuEIaZU2c/8mTqPE8yyunYHE6taf+qRMbTO2JxCpHydSCbDurCNJlQ9W');
 
 --
 -- Indexes for dumped tables
@@ -116,7 +117,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=95;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
