@@ -66,8 +66,7 @@ class SQLWrapper
     {
         $this->c_obj_sql_queries = $p_obj_sql_queries;
     }
-
-
+    
     /**
      * @param $p_session_key
      * @param $p_session_value
@@ -118,9 +117,7 @@ class SQLWrapper
         ];
 
         $this->safe_query($m_query_string, $m_arr_query_parameters);
-
         session_destroy();
-
     }
 
     /**
@@ -161,7 +158,6 @@ class SQLWrapper
             ':local_username' => $p_username
         ];
 
-
         $this->safe_query($m_query_string, $m_arr_query_parameters);
 
         if ($this->count_rows() > 0) {
@@ -169,7 +165,6 @@ class SQLWrapper
         }
         return $username_var_exists;
     }
-
 
     /**
      * function creates a new record in the databaes of a session recorded. function accepts session key and session value to be passed as parameters for safe_query.The query is executed using safe_query with passed query string and passed parameters.
@@ -191,7 +186,7 @@ class SQLWrapper
 
 
     /**
-     * 
+     * function returns and array of messages from the database messages table. The query is executed using safe_query with passed query string and passed parameters but in this case no parameters needed to be set.
      * @return mixed
      */
     public function get_messages_var()
@@ -205,13 +200,11 @@ class SQLWrapper
 
         $message = $this->safe_fetch_all_array();
         return $message;
-
-        // return $this->safe_fetch_array();
-
     }
 
 
     /**
+     * function stores a new message in the database with 11 passed parameters. The query is executed using safe_query with passed query string and passed parameters.
      * @param $p_source
      * @param $p_destination
      * @param $p_time
@@ -246,6 +239,7 @@ class SQLWrapper
     }
 
     /**
+     * function creates a new user in the database with passed parameters. The query is executed using safe_query with passed query string and passed parameters.
      * @param $p_username
      * @param $p_password
      * @param $p_name
@@ -266,6 +260,7 @@ class SQLWrapper
     }
 
     /**
+     * 
      * @param $p_session_key
      * @param $p_session_value
      */
@@ -283,6 +278,7 @@ class SQLWrapper
     }
 
     /**
+     * this function accepts a query string and an array of parameters. The function uses prepeared statements and binds parameters. Function also catches pdo exception and displays error information
      * @param $p_query_string
      * @param null $p_arr_params
      * @return mixed
@@ -321,6 +317,7 @@ class SQLWrapper
     }
 
     /**
+     * function counts how many rows were returne from a query
      * @return mixed
      */
     public function count_rows()
@@ -330,6 +327,7 @@ class SQLWrapper
     }
 
     /**
+     * function returns a row 
      * @return mixed
      */
     public function safe_fetch_row()
