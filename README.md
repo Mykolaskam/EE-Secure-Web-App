@@ -15,3 +15,7 @@ by a user.
 
 * **Mykolas Kaminskas** - [Github](https://github.com/Mykolaskam)
 * **Vinay Tailor** - [GitHub](https://github.com/vinsta11)
+
+## Notice
+
+The application no longer has access to EE SMS server
